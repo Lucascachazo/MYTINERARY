@@ -1,8 +1,10 @@
- import logo from "./assets/logotip.png"
-
+import logo from "./assets/logotip.png"
 import "materialize-css/dist/css/materialize.min.css"
-// import  M from "materialize-css"
-
+import  M from "materialize-css"
+import { FcHome} from 'react-icons/fc'
+import { FcSportsMode} from 'react-icons/fc'
+import { FcAssistant} from 'react-icons/fc'
+import { FcManager} from 'react-icons/fc'
 
 const Usuario =()=>{
 
@@ -10,23 +12,18 @@ const Usuario =()=>{
         
         
         <div className="logo">
+            
              { <img src={logo} style={{
                  opacity:""
                 }} alt=""></img> }
-            <div className="menu">
-                 <a  href="">☀ CITIES</a>
-                 <a  href="">✈ FLIGTHS</a>
-                 <a  href="">☏ CONTACT</a>
-                 <i class="bi bi-arrow-down-right-square-fill"></i>
-            </div>
-                
-                 
-            <div className="logo">
-                 
             
+            <div className="menu">
+                 <a><FcHome style= {{fontSize:"15px"}} /> HOME  </a>
+                 <a  href=""><FcSportsMode style= {{fontSize:"15px"}} /> CITIES</a>
+                 <a  href=""><FcAssistant style= {{fontSize:"15px"}} /> CONTACT</a>
+                 <i class="bi bi-arrow-down-right-square-fill"></i>
+                 <a  href=""><FcManager style= {{fontSize:"25px"}} />LOGIN</a>
             </div>
-            <i className="material-icons" id="iconos">account_circle</i>
-      
         
         </div> 
         

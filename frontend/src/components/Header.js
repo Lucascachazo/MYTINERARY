@@ -9,7 +9,9 @@ export const Header = () => {
             
             <div className="imagenLogo">
                 <Usuario/>
-                <img  src={fotito} style={{ width:"100%",}} alt=""></img>
+                <img  src={fotito} style={{ width:"100%",
+            marginTop:"2vh"
+            }} alt=""></img>
 
                  
                  

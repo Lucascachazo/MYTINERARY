@@ -1,3 +1,7 @@
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+
 html *{
     margin: 0;
     padding: 0;
@@ -16,7 +20,7 @@ html *{
     font-weight: 400;
 }
 .menu{
-    margin-left: 27vw;
+    margin-left: 24vw;
 }
 .menu a{
     margin-left: 2vw;
@@ -43,17 +47,18 @@ html *{
     font-weight: 500;
     opacity: 0.8;
 }
-.primerTexto2{
-    margin-bottom: 10vh;
-    margin-top: 2vh;
+.primerTexto2 {
+    margin-bottom: 1vh;
+    margin-top: 0.5vh;
     font-size: 22px;
-    padding: 10vh;
+    padding: 7vh;
     text-align: center;
-    height: 9vh;
+    height: vh;
     color: rgb(232, 226, 226);
     font-family: 'Indie Flower', cursive;
     font-weight: 500;
-    background-color: #210340;    
+    background-color: #210340;   
+    border: 2px solid rgb(54, 14, 77); 
 
 }
 h4{
@@ -71,4 +76,13 @@ h4{
 }
 #cajaFlecha{
     text-align: center;
+}
+
+.tituloCiudades{
+background-color:rgba(121, 121, 216, 0.227) ;
+text-align: center;
+font-family: 'Indie Flower', cursive;
+color: wheat;
+font-size:3.3vh;
+
 }
