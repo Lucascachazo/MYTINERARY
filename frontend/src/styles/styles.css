@@ -12,18 +12,18 @@ html *{
     justify-content: space-between;
     align-items: center;
     padding: 0.8vh;
-    margin-left: 10;
+    margin-left: 2vw;
 }
 
 .logo a {
     color:rgb(220, 214, 214);
-    font-weight: 400;
+    font-weight: 600;
+    margin: 3vw;
 }
-.menu{
-    margin-left: 24vw;
-}
-.menu a{
-    margin-left: 2vw;
+
+.menu a:hover{
+    background-color: rgba(49, 51, 45, 0.309);
+    padding: 2vh;
 }
 
  
@@ -31,14 +31,14 @@ html *{
 .divHeader{
     background-color: #210340;    
     width: 100%;
-    height: 14vh;
+    height: 15.2vh;
 }
 .fondoSection{
     background-color: #210340;    
 
 }
 .primerTexto{
-    font-size: 22px;
+    font-size: 3vh;
     text-align: center;
     height: 9vh;
     margin-top:-0.5vh;
@@ -50,7 +50,7 @@ html *{
 .primerTexto2 {
     margin-bottom: 1vh;
     margin-top: 0.5vh;
-    font-size: 22px;
+    font-size: 3vh;
     padding: 7vh;
     text-align: center;
     height: vh;
@@ -64,16 +64,7 @@ html *{
 h4{
     padding:2vh;
 }
-#iconos{
-    font-size: 33px;
-    color: rgb(255, 255, 255);
-}
-#iconoPag{
-    font-size: 100px;
-    margin-right: 10vw;
 
-    
-}
 #cajaFlecha{
     text-align: center;
 }
@@ -85,4 +76,25 @@ font-family: 'Indie Flower', cursive;
 color: wheat;
 font-size:3.3vh;
 
+}
+
+
+nav{
+border:2px solid rgba(245, 222, 179, 0.672);
+}
+
+
+nav Link {
+    margin-right: 4vw;
+}
+
+
+
+nav:hover{
+    background-color: rgba(250, 200, 0, 0.501);
+}
+
+
+.imagenLogo{
+    height: 100vh;
 }

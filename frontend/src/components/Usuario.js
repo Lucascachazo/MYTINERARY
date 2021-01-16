@@ -1,31 +1,30 @@
 import logo from "./assets/logotip.png"
 import "materialize-css/dist/css/materialize.min.css"
-import  M from "materialize-css"
 import { FcHome} from 'react-icons/fc'
 import { FcSportsMode} from 'react-icons/fc'
-import { FcAssistant} from 'react-icons/fc'
 import { FcManager} from 'react-icons/fc'
+import { Link } from "react-router-dom"
 
 const Usuario =()=>{
 
     return(
         
         
-        <div className="logo">
+        <header className="logo">
             
-             { <img src={logo} style={{
-                 opacity:""
-                }} alt=""></img> }
+             { <img src={logo} alt=""></img> }
             
             <div className="menu">
-                 <a><FcHome style= {{fontSize:"15px"}} /> HOME  </a>
-                 <a  href=""><FcSportsMode style= {{fontSize:"15px"}} /> CITIES</a>
-                 <a  href=""><FcAssistant style= {{fontSize:"15px"}} /> CONTACT</a>
-                 <i class="bi bi-arrow-down-right-square-fill"></i>
-                 <a  href=""><FcManager style= {{fontSize:"25px"}} />LOGIN</a>
+                 
+                 <Link to="/"><FcHome  style= {{fontSize:"2.5vh"}} />HOME</Link>
+
+                 <Link to="/cities"><FcSportsMode style= {{fontSize:"2.5vh"}}/>CITIES</Link>
+
+                 <Link><FcManager style= {{fontSize:"2.5vh"}}/>LOGIN</Link>
+
             </div>
         
-        </div> 
+        </header> 
         
 
     );

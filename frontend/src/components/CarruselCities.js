@@ -3,7 +3,6 @@ import Slider from "react-slick"
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-// import pik from "../cities/atenas.jpg"
 
 
 const fotos = [
@@ -32,36 +31,40 @@ export default class SimpleSlider extends Component {
       slidesToShow: 1,
       rows: 2,
       slidesPerRow: 2,
-      slidesToScroll: 1,
+      // slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 1800,
-      pauseOnHover: true
+      autoplaySpeed: 1900,
+      fade: true ,
+      pauseOnDotsHover:false,
+      dots: true,
     };
-    return (
-      <div>
-        <Slider {...settings}>
-          
-          {fotos.map(foto => {
-                 const fotito = require (`../cities/${foto.url}`)
-            console.log(fotito)
 
+
+  return (
+    <div>
+        <Slider {...settings}>
+            
+          {fotos.map(foto => {
+          const fotito = require (`../cities/${foto.url}`)
+          // console.log(fotito)
+          
           return(
+            
             <div className="carrusel">
 
-              < div className="divCarrusel" style={{   
-               backgroundImage:`url("${fotito.default}")`,
-               height:"40vh",
-               backgroundSize:"cover",
-                }}><h3 className="tituloCiudades">{foto.nombre}</h3>
+                < div className="divCarrusel" style={{backgroundImage:`url("${fotito.default}")`,height:"40vh",backgroundSize:"cover",}}>
+              
+                    <h3 className="tituloCiudades">{foto.nombre}</h3>
 
-               </div>
+                </div>
             </div>
-      
-           )
-           })}
+        
+            )
+            })}
 
-        </Slider>
-      </div>
+          </Slider>
+    </div>
+
     );
   }
 }

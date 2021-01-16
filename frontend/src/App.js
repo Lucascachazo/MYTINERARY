@@ -1,8 +1,8 @@
 import './App.js'
 import Header from "./components/Header"
 import "./styles/styles.css"
-import {BrowserRouter , Route} from "react-router-dom"
-import Usuario from './components/Usuario.js'
+import {BrowserRouter , Route, Switch} from "react-router-dom"
+import Cities from "./components/Cities"
 
 
 
@@ -12,10 +12,15 @@ function App() {
 <>
 <BrowserRouter>
 
-<Route exact path="/" components={Usuario}/>
-  
-</BrowserRouter>
 <Header/>
+  <Switch>
+       <Route path="/cities" component={Cities}/>
+
+  </Switch>
+
+
+</BrowserRouter>
+
 </>
   
   );
