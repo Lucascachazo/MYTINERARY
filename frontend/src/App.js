@@ -14,20 +14,17 @@ function App() {
 <>
 <BrowserRouter>
   <Nav/>  
-{/* <ContenedorGral/> */}
 
   <Switch>
     
       <Route exact path="/" component={ContenedorGral}/>
     
-       <Route path="/cities" component={Cities}/>
+      <Route path="/cities" component={Cities}/>
 
   </Switch>
 
 
 </BrowserRouter>
-
-
 </>
   
   );

@@ -48,18 +48,18 @@ export default class SimpleSlider extends Component {
           const fotito = require (`../cities/${foto.url}`)
           // console.log(fotos.map)
           
-          return(
+      return(
             
             <div key={foto.nombre}  className="carrusel">
 
-                < div className="divCarrusel" style={{backgroundImage:`url("${fotito.default}")`,height:"40vh",backgroundSize:"cover",margin:"2vh"}}>
-              <div style={{height:"20vh"}}>
-              <h3 style={{}} className="tituloCiudades">{foto.nombre}</h3>
+                <div className="divCarrusel" style={{backgroundImage:`url("${fotito.default}")`,height:"40vh",backgroundSize:"cover",margin:"2vh"}}><div style={{height:"20vh"}}>
+                  
+                  <h3 style={{}} className="tituloCiudades">{foto.nombre}</h3>
 
-              </div>
+                 </div>
 
-                </div>
-            </div>
+             </div>
+         </div>
         
             )
             })}
