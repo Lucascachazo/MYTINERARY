@@ -5,12 +5,13 @@ import { FcSportsMode} from 'react-icons/fc'
 import { FcManager} from 'react-icons/fc'
 import { Link } from "react-router-dom"
 
-const Usuario =()=>{
+
+const Nav =()=>{
 
     return(
         
-        
-        <header className="logo">
+        <div className="divHeader" >
+              <header className="logo">
             
              { <img src={logo} alt=""></img> }
             
@@ -20,14 +21,16 @@ const Usuario =()=>{
 
                  <Link to="/cities"><FcSportsMode style= {{fontSize:"2.5vh"}}/>CITIES</Link>
 
-                 <Link><FcManager style= {{fontSize:"2.5vh"}}/>LOGIN</Link>
+                 <FcManager style= {{fontSize:"2.5vh"}}/><p className="login" style={{color:"white", display:"inline"}}>LOGIN</p>
 
             </div>
         
         </header> 
         
+        </div>
+      
 
     );
 }
 
-export default Usuario
+export default Nav

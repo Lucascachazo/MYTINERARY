@@ -1,25 +1,32 @@
 import './App.js'
-import Header from "./components/Header"
 import "./styles/styles.css"
 import {BrowserRouter , Route, Switch} from "react-router-dom"
 import Cities from "./components/Cities"
+import  ContenedorGral  from "./components/ContenedorGral"
+import Nav from "./components/Nav"
+
 
 
 
 
 function App() {
-  return (
+  return (  
 <>
 <BrowserRouter>
+  <Nav/>  
+{/* <ContenedorGral/> */}
 
-<Header/>
   <Switch>
+    
+      <Route exact path="/" component={ContenedorGral}/>
+    
        <Route path="/cities" component={Cities}/>
 
   </Switch>
 
 
 </BrowserRouter>
+
 
 </>
   

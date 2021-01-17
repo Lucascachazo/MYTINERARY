@@ -10,9 +10,9 @@ const fotos = [
         {nombre :"Atenas" , url:"atenas.jpg"},
         {nombre :"Buenos Aires" , url:"buenosAires.jpg"},
         {nombre :"Cordoba" , url:"cordoba.jpg"},
-        {nombre :"Londres" , url:"londres.jpg"},
+        {nombre :"London" , url:"londres.jpg"},
         {nombre :"Madrid" , url:"madrid.jpg"},
-        {nombre :"Moscu" , url:"moscu.jpg"},
+        {nombre :"Moscow" , url:"moscu.jpg"},
         {nombre :"Paris" , url:"paris.jpg"},
         {nombre :"Petra" , url:"petra.jpg"},
         {nombre :"Rome" , url:"roma.jpg"},
@@ -36,7 +36,7 @@ export default class SimpleSlider extends Component {
       autoplaySpeed: 1900,
       fade: true ,
       pauseOnDotsHover:false,
-      dots: true,
+      // dots: true,
     };
 
 
@@ -46,15 +46,17 @@ export default class SimpleSlider extends Component {
             
           {fotos.map(foto => {
           const fotito = require (`../cities/${foto.url}`)
-          // console.log(fotito)
+          // console.log(fotos.map)
           
           return(
             
-            <div className="carrusel">
+            <div key={foto.nombre}  className="carrusel">
 
-                < div className="divCarrusel" style={{backgroundImage:`url("${fotito.default}")`,height:"40vh",backgroundSize:"cover",}}>
-              
-                    <h3 className="tituloCiudades">{foto.nombre}</h3>
+                < div className="divCarrusel" style={{backgroundImage:`url("${fotito.default}")`,height:"40vh",backgroundSize:"cover",margin:"2vh"}}>
+              <div style={{height:"20vh"}}>
+              <h3 style={{}} className="tituloCiudades">{foto.nombre}</h3>
+
+              </div>
 
                 </div>
             </div>

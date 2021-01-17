@@ -1,30 +1,31 @@
-import Usuario from "./Usuario"
 import fotito from "./assets/avion2.jpg"
-import Section from "./Section"
+import Main from "./Main"
+// import Nav from "./Nav"
 
 
 
 
 
-export const Header = () => {
+
+export const ContenedorGral = () => {
     return (
         <div className="divHeader">
 
             <div className="imagenLogo">
                 
-                <Usuario/>
-                <img  src={fotito} style={{ width:"98.2vw",marginTop:"2vh"}} alt=""></img>
+                {/* <Nav/> */}
+                <img  src={fotito} style={{ width:"100%",marginTop:"2vh"}} alt=""></img>
 
                 <div className="fondoSection">
                     
                     <h4 className="primerTexto">Find your perfect trip , designed by insiders who know and love their cities</h4>
 
                 </div>
-                <Section/>
+                <Main/>
 
             </div>
             
         </div>
     )
 }
-export default Header
+export default ContenedorGral
