@@ -2,11 +2,6 @@ import fotito from "./assets/avion2.jpg"
 import Main from "./Main"
 // import Nav from "./Nav"
 
-
-
-
-
-
 export const ContenedorGral = () => {
     return (
         <div className="divHeader">

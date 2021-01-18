@@ -9,7 +9,7 @@ export const Main = () => {
             <h3 className="primerTexto2">Popular MYtineraries</h3>
         </div>
         <div>
-            <SimpleSlider/>  {/*Carrusel--------*/}
+            <SimpleSlider/> 
         </div>
         </>
     )
