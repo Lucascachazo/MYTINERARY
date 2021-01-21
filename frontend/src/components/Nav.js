@@ -7,9 +7,9 @@ import { Link } from "react-router-dom"
 
 const Nav =()=>{
     return( 
-    <div className="divHeader" >
+    <div className="boxNav" >
         <header className="logo">
-            {<img src={logo} alt=""></img>}
+            {<img src={logo} alt="logo"></img>}
         <div className="menu">
             <Link to="/"><FcHome  style= {{fontSize:"4.5vh"}} />HOME</Link>
             <Link to="/cities"><FcSportsMode style= {{fontSize:"4.5vh"}}/>CITIES</Link>

@@ -2,19 +2,17 @@ import fotito from "./assets/avion2.jpg"
 import Main from "./Main"
 // import Nav from "./Nav"
 
-export const ContenedorGral = () => {
+export const Container = () => {
     return (
-        <div className="divHeader">
+        <div className="boxNav">
 
-            <div className="imagenLogo">
+            <div className="imgPrincipal">
                 
                 {/* <Nav/> */}
                 <img  src={fotito} style={{ width:"100%",marginTop:"2vh"}} alt=""></img>
 
-                <div className="fondoSection">
-                    
-                    <h4 className="primerTexto">Find your perfect trip , designed by insiders who know and love their cities</h4>
-
+                <div className="backroundFirstText">
+                    <h4 className="firstText">Find your perfect trip , designed by insiders who know and love their cities</h4>
                 </div>
                 <Main/>
 
@@ -23,4 +21,4 @@ export const ContenedorGral = () => {
         </div>
     )
 }
-export default ContenedorGral
+export default Container
