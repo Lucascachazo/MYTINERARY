@@ -24,6 +24,11 @@ html *{
 .menu a:hover{
     background-color: rgba(255, 255, 255, 0.09);
 }
+/* .menu{
+    display: flex;
+    align-items: center;
+    justify-content: ;
+} */
 .menu a{
     padding: 2vh;
     border-radius: 1vh;
@@ -113,9 +118,7 @@ nav:hover{
 .h1CallToAction :hover{
     background-color: rgb(0, 0, 0);
 }
-.login{
-    /* margin-right: 2.4vw; */
-}
+
 
 
 .slider{
@@ -159,6 +162,8 @@ nav:hover{
     opacity: 0.7;
     color:black;
     margin-top: 18vh;
+    font-family: 'Indie Flower', cursive;
+
     
 }
 .ciudadesNombre:hover{

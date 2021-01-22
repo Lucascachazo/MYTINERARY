@@ -13,7 +13,7 @@ const Nav =()=>{
         <div className="menu">
             <Link to="/"><FcHome  style= {{fontSize:"4.5vh"}} />HOME</Link>
             <Link to="/cities"><FcSportsMode style= {{fontSize:"4.5vh"}}/>CITIES</Link>
-            <Link> <FcManager style= {{fontSize:"4.5vh "}}/><p className="login" style={{color:"white", display:"inline"}}>LOGIN</p></Link>
+            <Link to=""> <FcManager style= {{fontSize:"4.5vh "}}/><p className="login" style={{color:"white", display:"inline"}}>LOGIN</p></Link>
         </div>
         </header> 
     </div>     
