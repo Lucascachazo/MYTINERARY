@@ -1,8 +1,6 @@
-import e from 'cors'
 import React , { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import Nav from "./Nav"
-import { FcSearch} from 'react-icons/fc'
 
 
 const Cities = () => {
@@ -25,7 +23,7 @@ const Cities = () => {
             //  console.log(city) 
           return  (
             city.cityName.toLowerCase().startsWith(search.toLowerCase().trim())
-              )
+          )
     
         }))
 

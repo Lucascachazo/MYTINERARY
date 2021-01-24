@@ -1,4 +1,3 @@
-import logo from "./assets/logotip.png"
 import "materialize-css/dist/css/materialize.min.css"
 import { FcHome} from 'react-icons/fc'
 import { FcFactory} from 'react-icons/fc'

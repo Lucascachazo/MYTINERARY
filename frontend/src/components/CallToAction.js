@@ -1,5 +1,4 @@
 import React from 'react'
-import pik from "./assets/clickhere1.png"
 import{Link}from "react-router-dom"
 
 const CallToAction = () => {

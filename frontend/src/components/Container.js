@@ -7,7 +7,7 @@ export const Container = () => {
     <>
         <div className="contenedor">
             <div className="foto">
-            <img className="fotopik" src={fotito} />
+            <img className="fotopik" src={fotito} alt="foto"/>
 
         </div>
         <div className="texto-encima"><Nav/></div>
