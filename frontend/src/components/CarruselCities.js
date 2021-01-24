@@ -36,7 +36,7 @@ export default class SimpleSlider extends Component {
     };
 
   return (
-    <div>
+    <div className="contenedorCarr">
         <Slider {...settings}>
             {fotos.map(foto => {
             const fotito = require (`../cities/${foto.url}`)

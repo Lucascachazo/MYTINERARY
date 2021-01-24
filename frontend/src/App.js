@@ -3,14 +3,14 @@ import "./styles/styles.css"
 import {BrowserRouter , Route, Switch,Redirect} from "react-router-dom"
 import Cities from "./components/Cities"
 import  Conteiner  from "./components/Container"
-import Nav from "./components/Nav"
+// import Nav from "./components/Nav"
 import City from "./components/City"
 
 function App() {
   return (  
 <>
 <BrowserRouter>
-  <Nav/>  
+  {/* <Nav/>   */}
   <Switch>
       <Route exact path="/" component={Conteiner}/>
       <Route exact path="/cities" component={Cities}/>

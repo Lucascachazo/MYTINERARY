@@ -2,11 +2,12 @@ const City = require('../models/City')
 
 const cityController = {
 addCity: (req,res) => {
-//   const{cityName ,cityPic}=req.body    
+
     const ciudadGrabar = new City({
         cityName: req.body.cityName,
         cityPic: req.body.cityPic
     })
+
     ciudadGrabar.save()
     .then(ciudadGrabada => {
         return res.json({success: true, respuesta: ciudadGrabada})
@@ -17,27 +18,38 @@ addCity: (req,res) => {
 },
 
 allCities: async (req,res) => {
+    console.log(req.body)
+
 const data = await City.find()
 
 
-        res.json({
+ res.json({
             respuesta: data 
         })
     
     },
 
-oneCity :(req, res) => {
-        const id = req.params.id
-           data.map(city => {
-               if (city._id === id) { 
-                   res.json({
-                       respuesta : city
-                   })   
-               }
-           })
-        }
+    oneCity :  async (req, res) => {
 
+     const id = req.params.id
+     try{
+        const data = await City.findById(id)
+        res.json({
+            success :true ,
+            respuesta : data
+   
+           }) 
+     }
+    catch (error) {
+        res.json({
+            success :false ,
+            respuesta: "No se puede concretar el pedido "+ error
+        })
+    }
+     
+
+     
+    }
 }
-
 module.exports = cityController
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Nav from "./Nav"
 
 export const  City = (props) => {
 const [city , setCity]= useState({})
@@ -11,16 +12,19 @@ const [city , setCity]= useState({})
      },[])
 
     return (
+    <>
         <div className="elementCity">
-            <h4 className="titleCity">{city.nombre}</h4 >
+        <Nav/>
+            <h4 className="titleCity">{city.cityName}</h4 >
             <div>
 
             <div className="pikCity" style={{
-                backgroundImage:`url('${city.url}')`
+                backgroundImage:`url('${city.cityPic}')`
             }}  />
 
              </div>
         </div>
+    </>
     )
 }
 export default City

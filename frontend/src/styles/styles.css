@@ -6,6 +6,7 @@ html *{
     margin: 0;
     padding:0  ;
     box-sizing: border-box;
+
 }
 .logo{
     display: flex;
@@ -22,25 +23,35 @@ html *{
 }
 
 .menu a:hover{
-    background-color: rgba(255, 255, 255, 0.09);
+    background-color: rgba(255, 255, 255, 0.446);
 }
-/* .menu{
-    display: flex;
-    align-items: center;
-    justify-content: ;
-} */
+ .menu{
+     padding: 1vh;
+     display: flex;
+     font-size: 20px;
+     
+ 
+} 
+
 .menu a{
-    padding: 2vh;
+    padding: 1vh;
     border-radius: 1vh;
-    /* margin-right: 7vw; */
+    font-family: 'Architects Daughter', cursive;
+
 }
 
  
 .boxNav{
-    background-color: #210340;    
-    width: 100%;
-    height: 15vh;
+    
+    background-color: #03010595;    
+    width: 98.4vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+
+
 }
+
 .backroundFirstText{
     background-color: #210340;    
 
@@ -50,8 +61,9 @@ html *{
     text-align: center;
     margin-top:-0.5vh;
     color: rgb(255, 255, 255);
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Architects Daughter', cursive;
     font-weight: 500;
+    color: black;
 }
 .primerTexto2 {
     margin-top: 0.5vh;
@@ -59,9 +71,9 @@ html *{
     padding: 2vh;
     text-align: center;
     color: rgb(232, 226, 226);
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Architects Daughter', cursive;
     font-weight: 500;
-    background-color: #210340;   
+    background-color: #03030474;   
 
 }
 h4{
@@ -76,10 +88,9 @@ h4{
 
 background-color:rgba(121, 121, 216, 0.227) ;
 text-align: center;
-font-family: 'Indie Flower', cursive;
-color: wheat;
+font-family: 'Architects Daughter', cursive;
+color:white;
 font-size:3.3vh;
-margin:0.5vh;
 
 
 }
@@ -101,18 +112,21 @@ nav:hover{
 }
 
 .h1CallToAction{
-    font-size: 5vh;
-    font-family: 'Indie Flower', cursive;
-    color: #210340 ;
-    height: 18vh;
+    font-size: 3vh;
+    font-family: 'Nothing You Could Do', cursive;
+    color: #292323 ;
+    height: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .callToContein{
-    background-image: url("https://i.pinimg.com/736x/f1/38/5a/f1385a672b72c458e0838b4fb0b6c514.jpg");
+    background-image: url("../components/assets/N\ \(7\).jpg");
     background-position: center;
     background-size:cover ;
     background-repeat: no-repeat;
-    padding: 6vh;
+    padding: 2vh;
 }
 
 .h1CallToAction :hover{
@@ -130,7 +144,7 @@ nav:hover{
 
 
 
-/*---------------------------------- COMPONENTE CITIES ------------------------------------------------------------ */
+/*----------- COMPONENTE CITIES ------------------------------------------------------------ */
 
 .cities {
     width: 90vw;
@@ -146,11 +160,7 @@ nav:hover{
     background-position: center;
     height: 35vh;
     margin:auto 0;
-    border: 2px solid rgba(124, 129, 138, 0.618);
-
-
-
-    
+    border: 2px solid rgba(124, 129, 138, 0.618);   
 }
 
 .ciudadesNombre{
@@ -162,16 +172,13 @@ nav:hover{
     opacity: 0.7;
     color:black;
     margin-top: 18vh;
-    font-family: 'Indie Flower', cursive;
-
-    
+    font-family: 'Architects Daughter', cursive;
 }
 .ciudadesNombre:hover{
     background-color: rgb(55, 96, 232);
 }
 
 .buttonItineraries{
-
     font-size: 20px;
 }
 /* ---------------------------------------- */
@@ -199,10 +206,109 @@ nav:hover{
         }
 
 .titleCity{
-    font-family: 'Indie Flower', cursive;
-    background-color: #18022e;
+    font-family: 'Architects Daughter', cursive;
+    background-color: #03010595;    
     color: rgb(36, 33, 33);   
     width:100vw;
     text-align: center;
     color:white;
+}
+
+
+
+.contenedorCarr{
+    margin: 4.5vh;
+    margin-bottom: 10vh;
+
+}
+.slick-slider  {
+padding-bottom: 81vh;
+}
+
+.titleCities{
+    display: flex;
+    justify-content: end;
+    font-family: 'Architects Daughter', cursive;
+    background-color: #03030474;   
+    opacity: 0.9;
+    margin-bottom: 6vh;
+    margin-top: 2vh;
+
+}
+.titleCities h3{
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size: 4vh;
+    height: 4vh;
+}
+
+
+.inputIn{
+   text-align: center;
+   width: 40vw!important;
+   color: blanchedalmond;
+
+
+}
+.inputBox {
+    display: flex!important;
+    justify-content: center!important;
+    border: 3px solid #2955b6e5!important;
+    width: 70vw!important;
+    margin: auto!important;
+ 
+}
+/* ----------------------prueba---------------------------- */
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    background-size: cover;
+}
+.texto-encima{
+    position: absolute;
+    top: 0px;
+}
+.centrado{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(16, 15, 15);
+    opacity:0.8;
+    font-size: 3.4vh;
+    width: 98vw;
+    background-color: rgba(164, 161, 179, 0.563);
+    font-family: 'Architects Daughter', cursive;
+
+}
+  
+.foto{
+        width: 98.3vw;
+    }
+    
+    
+.fotopik{
+width:98.3vw;
+height: 90vh;
+    }
+body{
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+.buttonClick{
+    padding: 0.5vh 4vw;
+    border-radius: 30px;
+    background-color: rgba(194, 172, 49, 0.378);
+    margin-bottom: 4vh;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 3vh;
+
+
+}
+.buttonClick:hover{
+    background-color: rgba(78, 178, 214, 0.508);
+
 }
