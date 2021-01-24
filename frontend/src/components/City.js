@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Nav from "./Nav"
+import Itineraries from './Itineraris'
 
 export const  City = (props) => {
 const [city , setCity]= useState({})
@@ -21,7 +22,7 @@ const [city , setCity]= useState({})
             <div className="pikCity" style={{
                 backgroundImage:`url('${city.cityPic}')`
             }}  />
-
+        <Itineraries/>
              </div>
         </div>
     </>

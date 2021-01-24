@@ -113,7 +113,7 @@ nav:hover{
 
 .h1CallToAction{
     font-size: 3vh;
-    font-family: 'Nothing You Could Do', cursive;
+    font-family: 'Yusei Magic', sans-serif;
     color: #292323 ;
     height: 1vh;
     display: flex;
@@ -186,7 +186,7 @@ nav:hover{
 
 .pikCity{
     width: 80vw;
-    height: 50vh;
+    height: 40vh;
     background-position: center;
     background-size: cover;
     border: 2px solid rgba(0, 0, 0, 0.535);
@@ -198,7 +198,6 @@ nav:hover{
 .elementCity{
     
 
-    height: 90vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -305,6 +304,7 @@ body{
     margin-bottom: 4vh;
     font-family: 'Architects Daughter', cursive;
     font-size: 3vh;
+    cursor: pointer;
 
 
 }
@@ -312,3 +312,82 @@ body{
     background-color: rgba(78, 178, 214, 0.508);
 
 }
+.noCities{
+    background: #131c30ad;  
+    color: rgb(255, 255, 255);   
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 200;
+    width: 80%;
+    height: 40vh;
+    margin: 9vh auto;
+    text-align: center;
+    border: 1px solid bisque;
+    background-image: url(../components/assets/s\ \(5\).jpg);
+    background-position: center;
+    background-size: cover;
+    
+
+}
+.noCities p{
+    padding: 3vh;
+    font-size: 4.4vh;
+    margin-top: 5vh;
+}
+.itineraries{
+    width: 80%;
+    background-color: blue;
+    height: 30vh;
+    background: url(../components/assets/s\ \(2\).jpg);
+    margin-bottom: 10vh;
+    text-align: center;
+    margin-top: 10vh;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid rgb(0, 0, 0);
+    margin-left: 8vw;
+
+}
+.itineraries h4{
+    margin-top: 16vh;
+    font-size: 5vh;
+    color: rgb(9, 9, 7);
+    font-weight: 500;
+    font-family: 'Architects Daughter', cursive;
+
+}
+
+.buttonClick2{
+    padding: 0.5vh 2vw;
+    border-radius: 30px;
+    background-color: rgba(28, 46, 181, 0.378);
+    font-family: 'Architects Daughter', cursive;
+    font-size: 3vh;
+    cursor: pointer;
+    margin: 10vh;
+
+
+}
+.buttonClick2:hover{
+    background-color: rgba(215, 218, 57, 0.508);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

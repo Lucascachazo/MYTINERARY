@@ -2,6 +2,8 @@ import e from 'cors'
 import React , { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import Nav from "./Nav"
+import { FcSearch} from 'react-icons/fc'
+
 
 const Cities = () => {
     const [filtradoCiudades,setFiltradoCiudades]=useState([])
@@ -37,7 +39,7 @@ const Cities = () => {
             <div className="inputBox"><input type="text" className="inputIn" placeholder="Search Cities"
             onChange={ (e) =>  setSearch(e.target.value)}></input></div>
           
-           {filtradoCiudades.length === 0 ? <h1>hola</h1> :  filtradoCiudades.map(({cityName ,cityPic,_id}) => {
+           {filtradoCiudades.length === 0 ? <div className="noCities"><p> SORRY, NO CITIES WITH THAT NAME WERE FOUND <br></br> PLASE TRY AGAIN</p></div> :  filtradoCiudades.map(({cityName ,cityPic,_id}) => {
                                  
                     return(
                          
@@ -55,21 +57,6 @@ const Cities = () => {
     )
 }
  export default Cities
-// {filtradoCiudades.map(({cityName ,cityPic,_id}) => {
-                    
-                                        
-//     return(
-         
-//         <div key={_id} className="cities">
-//              <div className="ciudadesImagen" style={{backgroundImage: `url('${cityPic}')`}}>
-            
-//                 <Link to={`/cities/${_id}`}> <h3 className="ciudadesNombre">{cityName}</h3></Link> 
-//             </div>
-    
-//         </div>
-//     )
-// })  }
-
 
 
 

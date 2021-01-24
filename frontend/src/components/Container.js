@@ -1,4 +1,4 @@
-import fotito from "./assets/s (4).jpg"
+import fotito from "./assets/fotologo.png"
 import Main from "./Main"
  import Nav from "./Nav"
 
@@ -12,7 +12,7 @@ export const Container = () => {
         </div>
         <div className="texto-encima"><Nav/></div>
 
-        <div className="centrado">FIND YOUR PERFECT TRIP , DESIGNED BY INSIDERS WHO KNOW AND LOVE THEIR CITIES</div>
+        <div  className="centrado "  >FIND YOUR PERFECT TRIP , DESIGNED BY INSIDERS WHO KNOW AND LOVE THEIR CITIES</div>
         </div>
 
         
@@ -23,11 +23,7 @@ export const Container = () => {
                 
                 
                 
-                {/* <img  src={fotito} style={{ width:"100%",marginTop:"2vh"}} alt=""> */}
-                {/* </img> */}
-                
                 <div className="backroundFirstText">
-                    {/* <h4 className="firstText">FOR MORE ITINERARIES CLICK HERE</h4> */}
                 </div>
                 <Main/>
 
