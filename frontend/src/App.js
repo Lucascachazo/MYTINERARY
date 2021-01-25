@@ -5,6 +5,7 @@ import Cities from "./components/Cities"
 import  Conteiner  from "./components/Container"
 // import Nav from "./components/Nav"
 import City from "./components/City"
+import Footer from "./components/Footer"
 
 function App() {
   return (  
@@ -17,7 +18,10 @@ function App() {
       <Route path="/cities/:id" component={City}/>
       <Redirect to="/"/>
   </Switch>
+  
+
 </BrowserRouter>
+
 </> 
   );
 }

@@ -44,7 +44,7 @@ html *{
 .boxNav{
     
     background-color: #03010595;    
-    width: 98.4vw;
+    width:98.2vw;
     height: 10vh;
     display: flex;
     justify-content: flex-end;
@@ -86,19 +86,19 @@ h4{
 
 .tituloCiudades{
 
-background-color:rgba(121, 121, 216, 0.227) ;
-text-align: center;
-font-family: 'Architects Daughter', cursive;
-color:white;
-font-size:3.3vh;
+    background-color:rgba(121, 121, 216, 0.227) ;
+    text-align: center;
+    font-family: 'Architects Daughter', cursive;
+    color:white;
+    font-size:3.3vh;
 
 
 }
 
 
 nav{
-border:2px solid rgba(245, 222, 179, 0.672);
-padding: 10vh;
+    border:2px solid rgba(245, 222, 179, 0.672);
+    padding: 10vh;
 }
 
 
@@ -189,10 +189,7 @@ nav:hover{
     height: 40vh;
     background-position: center;
     background-size: cover;
-    border: 2px solid rgba(0, 0, 0, 0.535);
-    
-    
-   
+    border: 2px solid rgba(0, 0, 0, 0.535);  
 }
 
 .elementCity{
@@ -208,7 +205,7 @@ nav:hover{
     font-family: 'Architects Daughter', cursive;
     background-color: #03010595;    
     color: rgb(36, 33, 33);   
-    width:100vw;
+    width:98vw;
     text-align: center;
     color:white;
 }
@@ -221,7 +218,7 @@ nav:hover{
 
 }
 .slick-slider  {
-padding-bottom: 81vh;
+    padding-bottom: 81vh;
 }
 
 .titleCities{
@@ -284,13 +281,13 @@ padding-bottom: 81vh;
 }
   
 .foto{
-        width: 98.3vw;
-    }
+    width: 98.3vw;
+}
     
     
 .fotopik{
-width:98.3vw;
-height: 90vh;
+    width:98.3vw;
+    height: 90vh;
     }
 body{
     background: #373B44;  /* fallback for old browsers */
@@ -368,30 +365,25 @@ body{
 .buttonClick2:hover{
     background-color: rgba(215, 218, 57, 0.508);
 }
+.footer{
+  background-color: #03030474;
+  height: 10vh;
+  color: white;
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  padding: 4vh;
+  border: 1px solid white;
 
-
-.containerSpinner {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-}
-.containerSpinnerChild{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform:translate(-50%, -50%);
-    transform: translate(-50%,-50%);
-    
-}
-.spiner{
-    width:100vw!important;
-    height: 100vh!important;
-    border:10 px solid currentColor!important;
-    border-right-color: transparent;
 }
 
-/* ----------------------------------------------------- */
+/* .divFooter{
+  position: ;
+  margin-top: 5vh;
+  height: 10vh;
+  background-color: yellow;
+} */
+
+/* -----------------------SPINNERR------------------------------ */
 @keyframes ldio-zfb0vfvvkes {
     0% {
       opacity: 1;
