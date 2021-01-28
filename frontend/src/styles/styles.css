@@ -79,6 +79,10 @@ html *{
 h4{
     padding:2vh;
 }
+.ops{
+  color:rgb(0, 0, 0);
+  font-size: 5vh;
+}
 
 #cajaFlecha{
     text-align: center;
@@ -91,8 +95,6 @@ h4{
     font-family: 'Architects Daughter', cursive;
     color:white;
     font-size:3.3vh;
-
-
 }
 
 
@@ -185,11 +187,11 @@ nav:hover{
 
 
 .pikCity{
-    width: 80vw;
-    height: 40vh;
+    width: 90vw;
+    height: 50vh;
     background-position: center;
     background-size: cover;
-    border: 2px solid rgba(0, 0, 0, 0.535);  
+    border: 2px solid rgba(233, 232, 232, 0.535);  
 }
 
 .elementCity{
@@ -251,7 +253,7 @@ nav:hover{
     display: flex!important;
     justify-content: center!important;
     border: 3px solid #2955b6e5!important;
-    width: 70vw!important;
+    width: 45vw!important;
     margin: auto!important;
  
 }
@@ -292,7 +294,7 @@ nav:hover{
 body{
     background: #373B44;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top, #4286f4, #1b2233); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 .buttonClick{
     padding: 0.5vh 4vw;
@@ -331,7 +333,7 @@ body{
     margin-top: 5vh;
 }
 .itineraries{
-    width: 80%;
+    width: 90vw;
     background-color: blue;
     height: 30vh;
     background: url(../components/assets/s\ \(2\).jpg);
@@ -341,13 +343,13 @@ body{
     background-position: center;
     background-size: cover;
     border: 3px solid rgb(0, 0, 0);
-    margin-left: 8vw;
+    /* margin-left: 8vw; */
 
 }
 .itineraries h4{
-    margin-top: 16vh;
+    margin-top: 14vh;
     font-size: 5vh;
-    color: rgb(9, 9, 7);
+    color: rgb(0, 0, 0);
     font-weight: 500;
     font-family: 'Architects Daughter', cursive;
 
@@ -356,7 +358,7 @@ body{
 .buttonClick2{
     padding: 0.5vh 2vw;
     border-radius: 30px;
-    background-color: rgba(28, 46, 181, 0.378);
+    background-color: rgba(255, 255, 255, 0.378);
     font-family: 'Architects Daughter', cursive;
     font-size: 3vh;
     cursor: pointer;

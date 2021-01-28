@@ -1,6 +1,19 @@
-
+SPRINT 1
 A nivel código: ojo la "estética" de los componentes.  Mucha linea en blanco que hace que el componente ocupe el doble de largo y se dificulte su lectura, tratá de no dejar lineas en blanco donde no amerita o no significa nada.  Ojo la indentación del código también.
 A nivel visual: me gusta, no me enloquece, el header me parece que se podria trabajar mas.  Los iconos están muy chiquitos, pegados a la palabra (por ejemplo el icono de cities con la palabra cities). El logo de la app quedó chico me parece, no se si es la app de Mytinerary o de Thai.... fijate que el protagonismo se lo roba esa foto que trajiste de Thai Airlines.  El carrusel está bien pero ojo: hay ciudades en español y no es intuitivo como funciona (no hay flechas, etc).  Por otro lado fijate que aparece la barra de scrolleo horizontal... hay algun elemento que está superando el 100% del ancho del dispositivo, no queda bien que aparezca esa barra.  Es un buen comienzo pero me gustaria verlo más pulido para próximos sprints.  El objetivo está cumplido y no falta ningún detalle del MVP.
+
+SPRINT 2
+@LucasCachazo buen código , ojo la indentación, mejoraste pero seguís con lineas en blanco sin sentido o "enter" sin sentido también (sobre todo esas dos cosas).  Por ejemplo un: 
+res.json({
+      respuesta: data
+    })
+
+y ojo que hay un async/await sin catchear el error.  En el otro lo catcheaste (hasta ahora fuiste el unico, muy bien!).  Se nota mucho laburo en tu código... se ve que le venis dando solo y en grupo.  :clap: 
+A nivel diseño me gustan varios cambios que implementaste... hay como un margen a la derecha, raro.  Y la caja marron (de for more itineraries, de paso fijate que está mal escrito) está parada sobre algo que a la izquierda tiene azul oscuro y a la derecha celeste, raro también.  No se si fue un efecto voluntario, pero me da raro.  Lo mismo abajo, el carrousel medio parado sobre lo celeste, y una partecita sobre el footer... o algo similar al footer.  Quisiste jugar con cierta superposición de elementos ? puede ser una opción pero A MI no me estaría cerrando, lo vemos con mas ojos si querés a ver que opinan.
+Me gusta la página de cities, no me gusta mucho la caja azul del input tan ancha y la rayita tan corta, algo ahi no me cierra.  Haria clickeable todo (foto + nombre de ciudad), no es evidente que el usuario tenga que hacer click en el nombre solamente para ir a otra página... 
+La página de city individual me gusta, fijate que el oops se pierde en lo negro de la camara de fotos y la E de have medio que también, algo haria con eso porque hay que priorizar le mensaje al usuario por sobre la foto (bajandole el tono a la foto quizás?)
+Otra cosa que me gustaria que hagas ver por compañeros es las fotos de ciudades... puede que me esté equivocando pero a algunas les veo como una bruma, no llega a ser un pixelado, pero la foto no está 100% nitida.  Hacelo ver.
+Obvio vamos con MVP porque cumple con la técnica y la interface de usuario es buena, promete y se le nota mucha dedicación
 
 // const data = [
 //     {
