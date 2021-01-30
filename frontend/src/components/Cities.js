@@ -3,32 +3,25 @@ import {Link} from 'react-router-dom'
 import Nav from "./Nav"
 import Spiner from  "./Spiner"
 import Footer from "./Footer"
+import citiesAction from "../redux/actions/citiesAction"
+import {connect} from 'react-redux'
 
 
 
-const Cities = () => {
-    const [filtradoCiudades,setFiltradoCiudades]=useState([])
-    const [cities ,setCities]=useState([])
-    const [search, setSearch]=useState('')
-    const [loaded , setLoaded]=useState(false)
-    //   console.log(loaded)
+const Cities = (props) => {
+console.log(props)
+console.log (props.filterCities)
+    useEffect(() => {
+        props.callCities()
 
-    useEffect(()=>{
-        fetch('http://localhost:4000/cities')
-        .then (response=>response.json())
-        .then(data => {setCities(data.respuesta)
-            setFiltradoCiudades(data.respuesta)})
-            setLoaded(true)
+
     },[]) 
 
-    useEffect (()=>{
-         setFiltradoCiudades(cities.filter( city =>{
-            //  console.log(city) 
-          return  (
-            city.cityName.toLowerCase().startsWith(search.toLowerCase().trim())
-          )
-        }))
-    },[search])
+
+    const [loaded , setLoaded]=useState(true)
+    // //   console.log(loaded)
+
+
  
  
     if(loaded === false ){
@@ -42,11 +35,11 @@ const Cities = () => {
             </div>
         
             <div className="inputBox"><input type="text" className="inputIn" placeholder="Search Cities"
-                 onChange={ (e) =>  setSearch(e.target.value)}></input>
-            </div>
-                 {filtradoCiudades.length === 0 ? <div className="noCities"><p> SORRY, NO CITIES WITH THAT NAME WERE FOUND <br></br> PLASE TRY AGAIN</p>
+                 onChange={ (e) =>  props.leerInput(e.target.value)}></input>
+            </div> 
+                 {props.filterCities.length === 0 ? <div className="noCities"><p> SORRY, NO CITIES WITH THAT NAME WERE FOUND <br></br> PLASE TRY AGAIN</p>
                     
-                 </div> :  filtradoCiudades.map(({cityName ,cityPic,_id}) => {
+                  </div> :  props.filterCities.map(({cityName ,cityPic,_id}) => {
                                  
                 return(
                          
@@ -65,8 +58,25 @@ const Cities = () => {
           
     )
 }
- export default Cities
- 
+
+const mapStateToProps = state  => {
+    return {
+        allCities: state.citiesReducer.cities,
+        filterCities:state.citiesReducer.filterCities
+    }
+}
+
+const mapDispatchToProps = {
+    callCities : citiesAction.allCities,
+    leerInput: citiesAction.filtrarCities
+
+
+    
+
+}
+
+export default connect (mapStateToProps,mapDispatchToProps)(Cities)
+
  
 
 

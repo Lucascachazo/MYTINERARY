@@ -10,9 +10,6 @@ const itineraryController = {
         .catch(error => {
             return res.json({success: false, error: error})
         })
-
-
-
     } ,
 
     agregarItineraries: (req, res) => {
@@ -38,9 +35,25 @@ const itineraryController = {
         .catch(error => {
             return res.json({success: false, error: error})
         })
+    },
+
+    findItenerary : async (req , res) =>{
+        console.log("hola")
+
+        try {const {id} = req.params ;
+        Itinerary.find({cityId:id})
+        .then ((city)=> res.json ({ success:true , respuesta: city}))
     }
+        catch(error){
+            console.log(error)    
+        }   
+    } 
 }
 module.exports = itineraryController
+
+
+
+// .populate('cityId')
 
 
   

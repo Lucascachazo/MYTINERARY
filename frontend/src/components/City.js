@@ -1,20 +1,40 @@
 import React, { useEffect, useState } from 'react'
 import Nav from "./Nav"
-import Itineraries from './Itineraris'
+import Itinerary from './Itinerary'
+import {connect} from 'react-redux'
+import itinerariesAction from '../redux/actions/itinerariesAction'
+
+
+
 
 export const  City = (props) => {
-const [city , setCity]= useState({})
+ const [city , setCity] = useState([])
 
+ const id = props.match.params.id
+
+// console.log(props)
     useEffect (() => {
-         const id= props.match.params.id
-         fetch('http://localhost:4000/cities/'+id)
-        .then (response=>response.json())
-        .then(data => setCity(data.respuesta))
-     },[])
+         props.callItineraries(id)
+         const city = props.cities.filter(city =>{
+             return ( 
+                 city._id === id
+
+             )
+
+         })
+         setCity(city[0])
+
+
+    },[])
+//  console.log(city)
+
+
+console.log(props.allItineraries)
 
     return (
-    <>
-        <div className="elementCity">
+
+    <>    
+         <div className="elementCity">
         <Nav/>
             <h4 className="titleCity">{city.cityName}</h4 >
             <div>
@@ -22,13 +42,33 @@ const [city , setCity]= useState({})
             <div className="pikCity" style={{
                 backgroundImage:`url('${city.cityPic}')`
             }}  />
-        <Itineraries/>
+            {props.allItineraries.map (itinerary =>{
+                // console.log(itinerary)
+                return <Itinerary itinerary={itinerary}/>
+
+
+                 
+            } )}
+
              </div>
-        </div>
-    </>
+        </div> 
+    </> 
     )
 }
-export default City
 
+const mapStateToProps = state => {
+   
+    return {
+        allItineraries : state.itinerariesReducer.itineraries ,
+        cities : state.citiesReducer.cities 
+
+    }
+}
+const mapDispatchToProps = {
+    callItineraries : itinerariesAction.traerItineraries
+
+}
+
+export default connect (mapStateToProps, mapDispatchToProps)(City)
 
 

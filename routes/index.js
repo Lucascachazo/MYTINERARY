@@ -18,7 +18,8 @@ router.route('/cities/:id')
 .post(itineraryController.agregarItineraries)
 
 
-
+router.route('/itineraries/:id')
+.get(itineraryController.findItenerary)
 
 
 
