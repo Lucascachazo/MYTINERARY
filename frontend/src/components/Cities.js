@@ -9,8 +9,8 @@ import {connect} from 'react-redux'
 
 
 const Cities = (props) => {
-console.log(props)
-console.log (props.filterCities)
+// console.log(props)
+// console.log (props.filterCities)
     useEffect(() => {
         props.callCities()
 
