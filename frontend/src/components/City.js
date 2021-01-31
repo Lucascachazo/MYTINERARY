@@ -28,6 +28,8 @@ export const  City = (props) => {
 //  console.log(city)
 // console.log(props.allItineraries)
 
+    
+
     return (
 
     <>    
@@ -39,7 +41,9 @@ export const  City = (props) => {
         <div className="pikCity" style={{
                 backgroundImage:`url('${city.cityPic}')`
             }}  />
-            {props.allItineraries.map (itinerary =>{
+
+            
+            {props.allItineraries.length === 0 ? <div className="itineraryYet"><p>NO ITINERARIES YET!</p></div> : props.allItineraries.map (itinerary =>{
                 // console.log(itinerary)
                 return <Itinerary itinerary={itinerary}/>         
             } )}

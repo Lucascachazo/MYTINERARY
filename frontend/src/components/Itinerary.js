@@ -6,49 +6,42 @@ import Colapse from './Colapse';
 
 
 function Itinerary ({itinerary}) {
+    console.log({itinerary})
+
 const {activities,comments,hashtag,hours,likes,price,title,userName,userPic} = itinerary
     return (
         
         <>
+
+        
            {/* {activities.map( activity =>{
             return(
                 <div>
                     {activity.title}
-                    {/* {activity.img} */}
                 {/* </div>
             )
 //  })} */} 
-        
+
 <div className="boxItinerary">
+    
 
     <div className="boxpicUser"> 
-        <div  className="picUser"></div>
-        <div><h5>{userName}</h5></div>
+        <div  className="picUser" style={{backgroundImage:`url('${userPic}')`}} ></div>
+        <div ><h5 className="titleUser">{userName}</h5></div>
     </div>
 
     <div className="titleItinerary">
-    <h5 >{title}</h5>
-     <div className="acti">
-     
-  
-        
+        <h5 className="titleP">{title}</h5>
+        <div className="redes">
+            <h5 className="duration">Duration: {hours}hs</h5>
+            <h5 className="duration">Price: {price}</h5>
+            <h5 className="duration">< IoIosHeartEmpty className="iconH" /> {likes}</h5>
+            <h5 className="iconHash" >#{hashtag}</h5>
+            {/* <button>Wiew More</button> */}
+                {/* <Colapse/> */} 
+        </div>
     </div>
-     
-    </div>
-    
-    <div>
-        <h5 className="duration">Duration: {hours}hs</h5>
-        <h5 className="duration">Price:{price}</h5>
-        <h5>< IoIosHeartEmpty className="iconH" /> {hours}</h5>
-        <h5 className="iconHash" >#{hashtag} {hours}</h5>
-                <button>Wiew More</button>
-                <Colapse/>
 
-
-        
-    </div>
-    
-   
         {/* <h5>{hours}</h5>
         
         <h5>{hashtag}</h5>

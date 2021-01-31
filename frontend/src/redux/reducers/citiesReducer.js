@@ -13,22 +13,15 @@ const citiesReducer= (state = initialState , action) => {
         case 'FILTRAR_INPUT' :
             
         return{ ...state ,
-             valorInput: action.payload , 
-             filterCities : state.cities.filter(city => {
-                 return ( city.cityName.toLowerCase().startsWith(action.payload.toLowerCase().trim()))
-             })
-             
-             
-            
+            valorInput: action.payload , 
+            filterCities : state.cities.filter(city => {
+                return ( city.cityName.toLowerCase().startsWith(action.payload.toLowerCase().trim()))
+            })        
         }
                     
 
         default :return (state)
-                      
-
-
-        
-
+    
     }
 }
 

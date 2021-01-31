@@ -16,6 +16,7 @@ html *{
     margin-left: 2vw;
 }
 
+
 .logo a {
     color:rgb(220, 214, 214);
     font-weight: 600;
@@ -294,7 +295,7 @@ nav:hover{
 body{
     background: #373B44;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #4286f4, #1b2233); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top, #1b2233, #1b2233); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 .buttonClick{
     padding: 0.5vh 4vw;
@@ -387,15 +388,43 @@ body{
 .picUser{
   margin-top: 4vh;
   margin-left: 4vw;
-   background: url("https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2018/08/fotos-perfil-whatsapp_16.jpg?itok=fl2H3Opv"); 
    background-size: cover;
    background-position: center;
    border-radius: 100px;
   height: 15vh;
   width: 10vw;
 }
+.titleUser{
+  
+  font-size: 2.2vh;
+}
+.itineraryYet{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-left: 7vw;
+  display: flex;
+  color:rgb(255, 255, 255);
+  width: 75vw;
+  height: 35vh;
+  margin-bottom: 10vh;
+  margin-top: 9vh;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid rgb(255, 255, 255);
+  background-image:url(../components/assets/s\ \(2\).jpg);
+
+
+}
+.itineraryYet p{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 6vh;
+  color:rgb(8, 4, 24)
+}
 
 .boxItinerary{
+  border-radius: 50px;
+
   margin-left: 7vw;
   display: flex;
   color:rgb(255, 255, 255);
@@ -407,16 +436,27 @@ body{
   text-align: center;
   background-position: center;
   background-size: cover;
-  border: 3px solid rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2000' height='1000' preserveAspectRatio='none' viewBox='0 0 2000 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1352%26quot%3b)' fill='none'%3e%3crect width='2000' height='1000' x='0' y='0' fill='url(%23SvgjsLinearGradient1353)'%3e%3c/rect%3e%3cpath d='M2115.07 182.03C1848.77 186.98 1490.31 532.64 1108.83 532.03 727.35 531.42 788.58 12.49 605.71-42.13' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2334.75 252.01C2193.82 251.23 2059.89 127.01 1785.04 127.01 1510.18 127.01 1512.53 252.32 1235.32 252.01 958.12 251.7 838.45-9.94 685.61-17.03' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2012.29 533.97C1752.03 519.02 1579.64 53.33 1091.82 43.97 604.01 34.61 404.84-113.32 171.36-113.89' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2158.8 610.8C1955.53 602.01 1833.91 280.63 1424.06 260.8 1014.21 240.97 895.95-109.23 689.32-120.35' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2394.17 843.35C2164.6 824.88 2061.95 396.15 1607.87 363.35 1153.78 330.55 1046.15-60.48 821.56-74.95' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1352'%3e%3crect width='2000' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='87.5%25' y1='-25%25' x2='12.5%25' y2='125%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1353'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0.45'%3e%3c/stop%3e%3cstop stop-color='rgba(3%2c 8%2c 15%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
   
+}
+.titleP{
+  margin-right: 12vw;
 }
 .duration{
   font-size: 3vh;
 }
+.redes{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin-right: 4vw;
+  margin-top: 8vh;
+}
   
   
   .boxpicUser{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -429,6 +469,7 @@ body{
     color: red;
   }
   .acti{
+    
     width: 20vw;
     height: 20vh;
   }
@@ -436,11 +477,17 @@ body{
     color:blue
   }
   .titleItinerary{
+    
+    padding: 5vh 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
     margin-top: 4vh;
     font-family: 'Yusei Magic', sans-serif;
     text-align: center;
     width: 60vw;
     height: 10vh;
+    
   }
 
 /* -----------------------SPINNERR------------------------------ */
