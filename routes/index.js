@@ -22,6 +22,4 @@ router.route('/itineraries/:id')
 .get(itineraryController.findItenerary)
 
 
-
-
 module.exports = router
