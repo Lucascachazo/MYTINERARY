@@ -287,6 +287,9 @@ nav:hover{
     width: 98.3vw;
 }
     
+.buttons{
+  text-align: center;
+}
     
 .fotopik{
     width:98.3vw;
@@ -359,14 +362,14 @@ body{
 .buttonClick2{
     padding: 0.5vh 2vw;
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.378);
+    background-color: rgba(255, 255, 255, 0.755);
     font-family: 'Architects Daughter', cursive;
     font-size: 3vh;
     cursor: pointer;
     margin: 10vh;
 }
 .buttonClick2:hover{
-    background-color: rgba(215, 218, 57, 0.508);
+    background-color: rgba(57, 103, 218, 0.364);
 }
 .footer{
   background-color: #03030474;
@@ -430,15 +433,27 @@ body{
   color:rgb(255, 255, 255);
   width: 75vw;
   /* background-color: rgba(225, 228, 59, 0.727); */
-  height: 40vh;
+  height: 35vh;
   margin-bottom: 10vh;
   margin-top: 9vh;
   text-align: center;
   background-position: center;
   background-size: cover;
   border: 2px solid rgb(255, 255, 255);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2000' height='1000' preserveAspectRatio='none' viewBox='0 0 2000 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1352%26quot%3b)' fill='none'%3e%3crect width='2000' height='1000' x='0' y='0' fill='url(%23SvgjsLinearGradient1353)'%3e%3c/rect%3e%3cpath d='M2115.07 182.03C1848.77 186.98 1490.31 532.64 1108.83 532.03 727.35 531.42 788.58 12.49 605.71-42.13' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2334.75 252.01C2193.82 251.23 2059.89 127.01 1785.04 127.01 1510.18 127.01 1512.53 252.32 1235.32 252.01 958.12 251.7 838.45-9.94 685.61-17.03' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2012.29 533.97C1752.03 519.02 1579.64 53.33 1091.82 43.97 604.01 34.61 404.84-113.32 171.36-113.89' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2158.8 610.8C1955.53 602.01 1833.91 280.63 1424.06 260.8 1014.21 240.97 895.95-109.23 689.32-120.35' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M2394.17 843.35C2164.6 824.88 2061.95 396.15 1607.87 363.35 1153.78 330.55 1046.15-60.48 821.56-74.95' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1352'%3e%3crect width='2000' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='87.5%25' y1='-25%25' x2='12.5%25' y2='125%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1353'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0.45'%3e%3c/stop%3e%3cstop stop-color='rgba(3%2c 8%2c 15%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background: #1D4350; 
+  background: -webkit-linear-gradient(to bottom, #A43931, #1D4350);  
+  background: linear-gradient(to bottom, #A43931, #1D4350); 
+  ;
   
+}
+.styleBtn{
+  background-color: rgba(222, 184, 135, 0.487);
+  padding: 0.7vh;
+  margin-right: 13vw;
+  font-size:1.5vh;
+}
+.btnColapse{
+
 }
 .titleP{
   margin-right: 12vw;
@@ -451,9 +466,16 @@ body{
   align-items: flex-end;
   justify-content: space-evenly;
   margin-right: 4vw;
-  margin-top: 8vh;
+  margin-top: 4vh;
 }
+  .divColapse{
+    /* margin-right: 15vw;
+    /* margin-top: 2vh; */
+    /* background: #1D4350; 
+    background: -webkit-linear-gradient(to bottom, #A43931, #1D4350);   */
+    /* background: linear-gradient(to bottom, #A43931, #1D4350);  */ 
   
+  }
   
   .boxpicUser{
     
@@ -489,6 +511,21 @@ body{
     height: 10vh;
     
   }
+  .activiDiv{
+    width: 30vw;
+    height: 30vh;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: black;
+    font-size: 3vh;
+    background-color:black;
+
+  }
+
 
 /* -----------------------SPINNERR------------------------------ */
 @keyframes ldio-zfb0vfvvkes {

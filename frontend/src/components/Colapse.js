@@ -1,30 +1,44 @@
-import React, { useState } from 'react';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import React from 'react';
+import {useState} from 'react'
 
-const Colapse= () => {
-
-
-    
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
+const Colapse= (props) => {
+  // console.log(props)
+  const {activities,comments,hashtag,hours,likes,price,title,userName,userPic} = props.itinerary
+  const [visible, setVisible] =  useState(false)
 
   return (
-    <div>
-      <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>acavoyyyy</Button>
-      <Collapse isOpen={isOpen}>
-        <Card>
-          <CardBody>
-          Anim pariatur cliche reprehenderit,
-           enim eiusmod high life accusamus terry richardson ad squid. Nihil
-           anim keffiyeh helvetica, craft beer labore wes anderson cred
-           nesciunt sapiente ea proident.
-          </CardBody>
-        </Card>
-      </Collapse>
-      
+     <>
+ 
+    <div className="btnColapse">
+      <div >
+          <button o className="styleBtn" onClick={()=> setVisible(!visible)}>WIEW MORE</button>
+          {visible && <div>
+            {activities.map( activity =>{
+      return( 
+      <div>
+        
+        <div className="activiDiv" style={{backgroundImage:`url('${activity.img}')` ,
+         height:"15vh" ,
+         width:"60vw",
+         padding:"4vh"
+         }}>{activity.title}</div>
+      </div>
+      )
+       
+    })
+    }
+          {/* <div className="activiDiv" style={{backgroundImage:`url('${activities[0].img}')`,height:"20vh"}} > */}
+
+          {/* </div> */}
+          </div>}
+
+      </div>
+
     </div>
+    </>
   )
 }
 
 export default Colapse
+
+       

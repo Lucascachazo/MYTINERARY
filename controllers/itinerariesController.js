@@ -38,7 +38,7 @@ const itineraryController = {
     },
 
     findItenerary : async (req , res) =>{
-        console.log("hola")
+        console.log("aca estoy")
 
         try {const {id} = req.params ;
         Itinerary.find({cityId:id})

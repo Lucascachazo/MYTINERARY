@@ -5,15 +5,9 @@ import {connect} from 'react-redux'
 import itinerariesAction from '../redux/actions/itinerariesAction'
 import { Link } from 'react-router-dom'
 
-
-
-
-
 export const  City = (props) => {
     const [city , setCity] = useState([])
-
     const id = props.match.params.id
-
 // console.log(props)
     useEffect (() => {
             props.callItineraries(id)
@@ -27,11 +21,7 @@ export const  City = (props) => {
     },[])
 //  console.log(city)
 // console.log(props.allItineraries)
-
-    
-
     return (
-
     <>    
         <div className="elementCity">
             <Nav/>
@@ -47,12 +37,10 @@ export const  City = (props) => {
                 // console.log(itinerary)
                 return <Itinerary itinerary={itinerary}/>         
             } )}
-            <div >
-            <Link to={"/cities"}><button className="buttonClick2"> BACK TO CITIES</button></Link>
-            <Link to={"/"}><button className="buttonClick2"> HOME</button></Link> 
-
+            <div className="buttons">
+                <Link to={"/cities"}><button className="buttonClick2"> BACK TO CITIES</button></Link>
+                <Link to={"/"}><button className="buttonClick2"> HOME</button></Link> 
             </div>
-
      </div>
         </div> 
     </> 

@@ -8,7 +8,10 @@ const citiesReducer= (state = initialState , action) => {
     switch(action.type){
         case 'ALL_CITIES' :
 
-        return{...state ,  cities: action.payload, filterCities: action.payload}
+        return{...state ,  
+                 cities: action.payload,
+                 filterCities: action.payload
+        }
 
         case 'FILTRAR_INPUT' :
             

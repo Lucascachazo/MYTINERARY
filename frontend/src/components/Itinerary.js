@@ -1,26 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { IoIosHeartEmpty} from "react-icons/io";
 import Colapse from './Colapse';
 
 
 
 function Itinerary ({itinerary}) {
-    console.log({itinerary})
+    // console.log({itinerary})
 
 const {activities,comments,hashtag,hours,likes,price,title,userName,userPic} = itinerary
     return (
         
         <>
 
-        
-           {/* {activities.map( activity =>{
-            return(
-                <div>
-                    {activity.title}
-                {/* </div>
-            )
-//  })} */} 
 
 <div className="boxItinerary">
     
@@ -37,18 +28,12 @@ const {activities,comments,hashtag,hours,likes,price,title,userName,userPic} = i
             <h5 className="duration">Price: {price}</h5>
             <h5 className="duration">< IoIosHeartEmpty className="iconH" /> {likes}</h5>
             <h5 className="iconHash" >#{hashtag}</h5>
-            {/* <button>Wiew More</button> */}
-                {/* <Colapse/> */} 
         </div>
-    </div>
+        <div className="divColapse"><Colapse itinerary={itinerary}/></div>
 
-        {/* <h5>{hours}</h5>
         
-        <h5>{hashtag}</h5>
-        <h5>{price}</h5> */}
+    </div>
 </div>
-
-
         {/* <div className="itineraries"> */}
             {/* <h4><span className="ops">¡Oops!</span> <br/> WE DON'T HAVE ITINERARIES YET</h4>
             <Link to={"/cities"}><button className="buttonClick2"> BACK TO CITIES</button></Link>
