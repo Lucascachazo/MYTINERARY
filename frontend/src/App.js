@@ -9,23 +9,17 @@ import Footer from "./components/Footer"
 function App() {
   return (  
 <>
-<BrowserRouter>
-  <Switch>
-      <Route exact path="/" component={Conteiner}/>
-      <Route exact path="/cities" component={Cities}/>
-      <Route path="/cities/:id" component={City}/>
-      <Redirect to="/"/>
-  </Switch>
-  
-
-</BrowserRouter>
-
-
+  <BrowserRouter>
+    <Switch>
+        <Route exact path="/" component={Conteiner}/>
+        <Route exact path="/cities" component={Cities}/>
+        <Route path="/cities/:id" component={City}/>
+        <Redirect to="/"/>
+    </Switch>
+  </BrowserRouter>
 </> 
   );
 }
-
-
 export default App;
 
 

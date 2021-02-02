@@ -11,9 +11,7 @@ const itinerarySchema = new mongoose.Schema({
     activities:[{img:{type: String , required: true}, title:{type: String , required:true}}],
     coments: {type:[{userImg :String, userName: String, coment: String}], required: false, default: []}, 
     cityId:{type: mongoose.Schema.ObjectId , ref : 'city'}
-
 })
 
 const Itinerary = mongoose.model('itinerary', itinerarySchema)
-
 module.exports = Itinerary

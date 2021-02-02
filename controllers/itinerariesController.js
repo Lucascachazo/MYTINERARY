@@ -10,21 +10,21 @@ const itineraryController = {
         .catch(error => {
             return res.json({success: false, error: error})
         })
-    } ,
+    },
 
     agregarItineraries: (req, res) => {
 
         const itineraryAGrabar = new Itinerary({
-           title : req.body.title,
-           userPic: req.body.userPic,
-           userName : req.body.userName,
-           likes : req.body.likes,
-           hours : req.body.hours ,
-           price: req.body.price ,
-           hashtag :req.body.hashtag,
-           activities : req.body.activities ,
-           coments : req.body.coments ,
-           cityId : req.body.cityId
+        title : req.body.title,
+        userPic: req.body.userPic,
+        userName : req.body.userName,
+        likes : req.body.likes,
+        hours : req.body.hours ,
+        price: req.body.price ,
+        hashtag :req.body.hashtag,
+        activities : req.body.activities ,
+        coments : req.body.coments ,
+        cityId : req.body.cityId
 
         })
     
@@ -52,7 +52,6 @@ module.exports = itineraryController
 
 
 
-// .populate('cityId')
 
 
   

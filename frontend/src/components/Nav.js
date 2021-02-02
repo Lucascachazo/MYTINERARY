@@ -6,16 +6,18 @@ import { Link } from "react-router-dom"
 
 const Nav =()=>{
     return( 
-    <div className="boxNav" >
-        <header className="logo">
-            {/* {<img src={logo} alt="logo"></img>} */}
-        <div className="menu">
-            <div><Link to="/"><FcHome  style= {{}} />  HOME</Link></div>  
-            <div><Link to="/cities"><FcFactory style= {{}}/>  CITIES</Link></div>   
-        <div><Link to=""> <FcManager style= {{}}/><p className="login" style={{color:"white", display:"inline"}}>  SiGN UP</p></Link></div>   
-        </div>
-        </header> 
-    </div>     
+        <div className="boxNav" >
+            <header className = "logo">
+                <div className="menu">
+                    <div><Link to = "/"><FcHome/>HOME</Link></div>  
+                    <div><Link to = "/cities"><FcFactory/>CITIES</Link></div>   
+                    <div><Link to = ""> <FcManager/>
+                    <p className = "login" style = {{
+                                    color:"white",
+                                    display:"inline"}}>SiGN UP</p></Link></div>   
+                </div>
+            </header> 
+        </div>     
     );
 }
 export default Nav

@@ -19,12 +19,10 @@ addCity: (req,res) => {
 
 allCities: async (req,res) => {
     // console.log(req.body)
-
-const data = await City.find()
- res.json({ respuesta: data })
+    const data = await City.find()
+    res.json({ respuesta: data })
     
 },
-
     oneCity :  async (req, res) => {
 
      const id = req.params.id
@@ -33,19 +31,15 @@ const data = await City.find()
         res.json({
             success :true ,
             respuesta : data
-   
-           }) 
+        }) 
      }
     catch (error) {
         res.json({
             success :false ,
             respuesta: "No se puede concretar el pedido "+ error
         })
-    }
-     
-
-     
-    }
+    } 
+}
 }
 module.exports = cityController
 

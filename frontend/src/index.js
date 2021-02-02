@@ -6,8 +6,6 @@ import {Provider}from 'react-redux'
 import thunk from 'redux-thunk'
 import rootReducer from './redux/reducers/rootReducer'
 
-
-
 const miStore = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
@@ -16,7 +14,6 @@ ReactDOM.render(
   </Provider>,
     
   document.getElementById('root')
-  
 );
 
 

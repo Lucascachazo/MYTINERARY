@@ -7,8 +7,6 @@ import citiesAction from "../redux/actions/citiesAction"
 import {connect} from 'react-redux'
 
 const Cities = (props) => {
-//  console.log(props)
-//  console.log (props.filterCities)
     useEffect(() => {
         props.callCities()
     },[]) 
@@ -17,12 +15,11 @@ const Cities = (props) => {
 
     useEffect(() => {
         return setLoaded    
-    },)
+    })
 
     if(loaded === false ){
         return <Spiner/>
     }
-    
     return (
         <div className="contenedorCity"><Nav/>
                 <div className="titleCities">
