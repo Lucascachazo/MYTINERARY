@@ -7,8 +7,8 @@ import citiesAction from "../redux/actions/citiesAction"
 import {connect} from 'react-redux'
 
 const Cities = (props) => {
-// console.log(props)
-// console.log (props.filterCities)
+//  console.log(props)
+//  console.log (props.filterCities)
     useEffect(() => {
         props.callCities()
     },[]) 
@@ -16,30 +16,35 @@ const Cities = (props) => {
     const [loaded , setLoaded]=useState(false)
 
     useEffect(() => {
-        return setLoaded
-        
+        return setLoaded    
     },)
 
     if(loaded === false ){
         return <Spiner/>
     }
-        return (
-            <div className="contenedorCity"><Nav/>
+    
+    return (
+        <div className="contenedorCity"><Nav/>
                 <div className="titleCities">
-                <h3>CITIES</h3>
-            </div>
+                    <h3>CITIES</h3>
+                </div>
         
-            <div className="inputBox"><input type="text" className="inputIn"placeholder="SearchCities"onChange={ (e) =>  props.leerInput(e.target.value)}></input></div> 
-            {props.filterCities.length === 0 ? <div className="noCities"><p> SORRY, NO CITIES WITH THAT NAME WERE FOUND <br></br> PLEASE TRY AGAIN</p>
+            <div className = "inputBox"><input type= "text" className = "inputIn" placeholder = "SearchCities"  onChange = { (e) =>  props.leerInput(e.target.value)}></input>
+            </div> 
+           
+            {props.filterCities.length === 0 ? 
+                <div className = "noCities"><p> SORRY, NO CITIES WITH THAT NAME WERE FOUND <br></br> PLEASE TRY AGAIN</p>
                     
-            </div> :  props.filterCities.map(({cityName ,cityPic,_id}) => { 
+            </div> : 
+             
+             props.filterCities.map(({cityName ,cityPic,_id}) => { 
                 return(
-                    <div key={_id} className="cities">
-                    <div className="ciudadesImagen" style={{backgroundImage: `url('${cityPic}')`}}>
-                        <Link to={`/cities/${_id}`}> <h3 className="ciudadesNombre">{cityName}</h3></Link> 
-                            </div>
+                 <div key={_id} className="cities">
+                    <div className = "ciudadesImagen" style={{backgroundImage: `url('${cityPic}')`}}>
+                        <Link to = {`/cities/${_id}`}> <h3 className = "ciudadesNombre">{cityName}</h3></Link> 
+                    </div>
                     
-                        </div>
+                 </div>
                 )
             })}  
             <Footer/>

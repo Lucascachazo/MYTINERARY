@@ -23,7 +23,7 @@ const itineraryController = {
            price: req.body.price ,
            hashtag :req.body.hashtag,
            activities : req.body.activities ,
-           comments : req.body.comments ,
+           coments : req.body.coments ,
            cityId : req.body.cityId
 
         })
@@ -38,7 +38,6 @@ const itineraryController = {
     },
 
     findItenerary : async (req , res) =>{
-        console.log("aca estoy")
 
         try {const {id} = req.params ;
         Itinerary.find({cityId:id})

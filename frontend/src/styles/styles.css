@@ -201,7 +201,7 @@ nav:hover{
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(186, 164, 208, 0.104);
+    background-color: rgba(1, 0, 10, 0.713);
         }
 
 .titleCity{
@@ -253,7 +253,7 @@ nav:hover{
 .inputBox {
     display: flex!important;
     justify-content: center!important;
-    border: 3px solid #2955b6e5!important;
+    border: 3px solid #ae5f15e5!important;
     width: 45vw!important;
     margin: auto!important;
  
@@ -381,13 +381,11 @@ body{
   border: 1px solid white;
 
 }
-
-/* .divFooter{
-  position: ;
-  margin-top: 5vh;
-  height: 10vh;
-  background-color: yellow;
-} */
+.iconM{
+  color:rgba(12, 75, 12, 0.803);
+  margin:1vh;
+  font-size: 4vh;
+}
 .picUser{
   margin-top: 4vh;
   margin-left: 4vw;
@@ -396,6 +394,7 @@ body{
    border-radius: 100px;
   height: 15vh;
   width: 10vw;
+  border: 1px solid black
 }
 .titleUser{
   
@@ -425,106 +424,130 @@ body{
   color:rgb(8, 4, 24)
 }
 
-.boxItinerary{
-  border-radius: 50px;
-
-  margin-left: 7vw;
-  display: flex;
-  color:rgb(255, 255, 255);
-  width: 75vw;
-  /* background-color: rgba(225, 228, 59, 0.727); */
-  height: 35vh;
-  margin-bottom: 10vh;
-  margin-top: 9vh;
-  text-align: center;
-  background-position: center;
-  background-size: cover;
-  border: 2px solid rgb(255, 255, 255);
-  background: #1D4350; 
-  background: -webkit-linear-gradient(to bottom, #A43931, #1D4350);  
-  background: linear-gradient(to bottom, #A43931, #1D4350); 
-  ;
-  
-}
 .styleBtn{
-  background-color: rgba(222, 184, 135, 0.487);
-  padding: 0.7vh;
-  margin-right: 13vw;
-  font-size:1.5vh;
+  margin: -1vh;
+  background-color: rgba(44, 52, 73, 0.878);
+  width: 30vw;
+  padding: 0.5vh;
+  font-size:1.9vh;
+  color:white;
+  border-radius: 20px;
 }
-.btnColapse{
 
-}
 .titleP{
-  margin-right: 12vw;
+  margin-left: 12vw;
+  margin-bottom: 5vh;
 }
 .duration{
-  font-size: 3vh;
+  font-size: 2.9vh;
 }
-.redes{
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
-  margin-right: 4vw;
-  margin-top: 4vh;
-}
-  .divColapse{
-    /* margin-right: 15vw;
-    /* margin-top: 2vh; */
-    /* background: #1D4350; 
-    background: -webkit-linear-gradient(to bottom, #A43931, #1D4350);   */
-    /* background: linear-gradient(to bottom, #A43931, #1D4350);  */ 
   
-  }
-  
-  .boxpicUser{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .boxpicUser h5 {
+
+.boxpicUser h5 {
     margin-left: 4vw;
   }
+
   .iconH{
     color: red;
   }
+
   .acti{
-    
     width: 20vw;
     height: 20vh;
   }
-  .iconHash{
-    color:blue
-  }
-  .titleItinerary{
-    
-    padding: 5vh 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start;
-    margin-top: 4vh;
-    font-family: 'Yusei Magic', sans-serif;
-    text-align: center;
-    width: 60vw;
-    height: 10vh;
-    
-  }
-  .activiDiv{
-    width: 30vw;
-    height: 30vh;
-    background-position: center;
-    background-repeat:no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    color: black;
-    font-size: 3vh;
-    background-color:black;
 
+  .iconHash{
+    color:rgba(0, 0, 255, 0.405)
   }
+ 
+.boxItinerary{
+  border-radius: 30px;
+  margin-bottom: 10vh;
+  margin-top: 9vh;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  background-size: cover; 
+  border: 2px solid rgb(255, 255, 255);
+  background: #f2f2f213; 
+  ;
+  
+}
+
+.contenedorPadre{
+margin: 6vh auto;
+display: flex;
+flex-direction: column;
+align-items:center;
+justify-content: space-around;
+background: #C02425;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #F0CB35, #C02425);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #F0CB35, #C02425); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border: 2px solid rgba(245, 244, 244, 0.645);
+border-radius: 30px;
+width: 80%;
+min-height: 35vh;
+padding:1vh;
+color: white;
+font-family: 'Architects Daughter', cursive;
+box-shadow: 3px 2px  rgba(214, 129, 103, 0.282)
+
+
+}
+.titleItinerary{
+    display: flex;
+    display:block;
+    align-items: center;
+    width: 50vw;
+    justify-content: center; 
+    font-family: 'Yusei Magic', sans-serif;
+   
+  } 
+
+ .redes{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+.titulosActividades{
+  background-color: rgba(191, 191, 230, 0.556);
+  height: 3vh;
+  color:rgb(19, 19, 19);
+  text-align: center;
+  font-weight: 700;
+
+}
+
+
+.activiDiv{
+margin: 2vh;
+ background-position: center;
+ background-repeat:no-repeat;
+ background-size: cover;
+ 
+
+}
+.contenedorHijo{
+  display: flex;
+}
+
+.divColapse{
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 /* -----------------------SPINNERR------------------------------ */

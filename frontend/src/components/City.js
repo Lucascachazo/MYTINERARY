@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export const  City = (props) => {
     const [city , setCity] = useState([])
     const id = props.match.params.id
-// console.log(props)
+//  console.log(props)
     useEffect (() => {
             props.callItineraries(id)
             const city = props.cities.filter(city =>{
@@ -19,6 +19,8 @@ export const  City = (props) => {
             })
         setCity(city[0])
     },[])
+
+    if(props.cities.length !== 0) {
 //  console.log(city)
 // console.log(props.allItineraries)
     return (
@@ -30,12 +32,11 @@ export const  City = (props) => {
 
         <div className="pikCity" style={{
                 backgroundImage:`url('${city.cityPic}')`
-            }}  />
-
+            }}/>
             
-            {props.allItineraries.length === 0 ? <div className="itineraryYet"><p>NO ITINERARIES YET!</p></div> : props.allItineraries.map (itinerary =>{
+            {props.allItineraries.length === 0 ? <div className="itineraryYet"><p> NO ITINERARIES YET!</p></div> : props.allItineraries.map (itinerary =>{
                 // console.log(itinerary)
-                return <Itinerary itinerary={itinerary}/>         
+                return <Itinerary  itinerary={itinerary}/>         
             } )}
             <div className="buttons">
                 <Link to={"/cities"}><button className="buttonClick2"> BACK TO CITIES</button></Link>
@@ -44,7 +45,12 @@ export const  City = (props) => {
      </div>
         </div> 
     </> 
-    )
+    )} else {
+         props.history.push('/cities')
+        
+        return <> </>
+    }
+       
 }
 
 const mapStateToProps = state => {

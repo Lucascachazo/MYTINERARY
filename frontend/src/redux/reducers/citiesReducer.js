@@ -10,6 +10,7 @@ const citiesReducer= (state = initialState , action) => {
 
         return{...state ,  
                  cities: action.payload,
+                 
                  filterCities: action.payload
         }
 
