@@ -45,7 +45,7 @@ export const  City = (props) => {
     </> 
     )} else {
          props.history.push('/cities')
-         return <> </>
+         return false
     }      
 }
 const mapStateToProps = state => {

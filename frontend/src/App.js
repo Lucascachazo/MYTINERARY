@@ -4,17 +4,20 @@ import {BrowserRouter , Route, Switch,Redirect} from "react-router-dom"
 import Cities from "./components/Cities"
 import  Conteiner  from "./components/Container"
 import City from "./components/City"
-import Footer from "./components/Footer"
+import Login from './components/Login.js'
+// import Footer from "./components/Footer"
 
 function App() {
   return (  
 <>
   <BrowserRouter>
     <Switch>
-        <Route exact path="/" component={Conteiner}/>
-        <Route exact path="/cities" component={Cities}/>
-        <Route path="/cities/:id" component={City}/>
-        <Redirect to="/"/>
+        <Route exact path = "/" component={Conteiner}/>
+        <Route exact path = "/cities" component={Cities}/>
+        <Route path = "/cities/:id" component={City}/>
+        <Route path = "/login" component = {Login}/>
+
+        <Redirect to = "/"/>
     </Switch>
   </BrowserRouter>
 </> 

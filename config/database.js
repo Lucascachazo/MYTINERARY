@@ -1,3 +1,4 @@
+// CONEXION CON LA BASE DE DATOS 
 const mongoose = require('mongoose')
 // process.env.MONGODB_URI,
 

@@ -8,7 +8,8 @@ import {FcAlarmClock} from "react-icons/fc"
 
 function Itinerary ({itinerary}) {
     
-const {activities,hashtag,hours,likes,price,title,userName,userPic} = itinerary
+
+const {coments,activities,hashtag,hours,likes,price,title,userName,userPic} = itinerary
 const [visible, setVisible] =  useState(false)
 
    return (
@@ -28,14 +29,20 @@ const [visible, setVisible] =  useState(false)
                     <h5 className = "iconHash" >{hashtag}</h5>
                 </div> 
             </div>
-        </div>   
+        </div> 
+       
         
         {!visible ? <div>{activities.map( activity => {
-                        <Colapse  activity={activity} />
-        })}</div>
-                  : <div className="divColapse"><Colapse itinerary={itinerary}/></div>}
+                        <Colapse  activity = {activity} />})}</div>
+                        
+                  : <div className="divColapse"><Colapse itinerary = {itinerary}/>
+                  </div>}
+                  
+         
         <div>
-            <button className="styleBtn" onClick={()=> setVisible(!visible)}>WIEW MORE</button> 
+        {!visible ? <button className="styleBtn" onClick={()=> setVisible(!visible)}>
+                     WIEW MORE</button>
+                  : <button className="styleBtn" onClick={()=> setVisible(!visible)}>WIEW      LESS</button> }  
         </div>
     </div> 
 </>

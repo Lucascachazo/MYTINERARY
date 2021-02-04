@@ -11,7 +11,7 @@ const Nav =()=>{
                 <div className="menu">
                     <div><Link to = "/"><FcHome/>HOME</Link></div>  
                     <div><Link to = "/cities"><FcFactory/>CITIES</Link></div>   
-                    <div><Link to = ""> <FcManager/>
+                    <div><Link to = "/login"> <FcManager/>
                     <p className = "login" style = {{
                                     color:"white",
                                     display:"inline"}}>SiGN UP</p></Link></div>   

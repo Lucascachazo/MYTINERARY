@@ -46,20 +46,20 @@ export default class SimpleSlider extends Component {
               <div key={foto.nombre}  className="carrusel">
 
                   <div className="divCarrusel" style={{backgroundImage:`url("${fotito.default}")`,
-                   height:"40vh",
-                   backgroundSize:"cover",
-                   margin:"0 0.5vh",
-                   borderRadius:"1vh",
-                  }}><div style={{height:"10vh"}}>
-                   <h3 style={{}} className="tituloCiudades">{foto.nombre}</h3>
-                 </div>
-               </div>
+                      height:"40vh",
+                      backgroundSize:"cover",
+                      margin:"0 0.5vh",
+                      borderRadius:"1vh",
+                    }}>
+                     <div style={{height:"10vh"}}>
+                          <h3 style={{}} className="tituloCiudades">{foto.nombre}</h3>
+                     </div>
+                  </div>
             </div>       
           )
             })}
          </Slider>
       </div>
-
     );
   }
 }
