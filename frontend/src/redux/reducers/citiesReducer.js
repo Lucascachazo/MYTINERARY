@@ -23,7 +23,23 @@ const citiesReducer= (state = initialState , action) => {
                 )
             })        
         }
+
+        case 'CARGAR_CITY' :
+
+        return{
+            ...state ,
+            cities: action.payload
+
+        }
+
+        
+
+
+
         default : return (state)
+
+
+        
     }
 }
 export default citiesReducer

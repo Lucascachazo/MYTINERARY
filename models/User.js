@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     password:{type:String, required:true},
     urlPic:{type:String, required:true},
     rol:{type:String, default:"userLog"},
-    // country:{type:Array, required:true},
+    country:{type:String, required:true},
 
 })
 

@@ -4,11 +4,13 @@ const cityController = require ('../controllers/cityController')
 const itineraryController = require('../controllers/itinerariesController')
 const userController = require('../controllers/userController')
 const validatorController = require ('../controllers/validatorController')
+const passport = require('passport')
+require('../config/passport')
 
 // RUTA PARA CIUDADES----------------------------
 router.route('/cities')
 .get(cityController.allCities)
-.post(cityController.addCity)
+.post(passport.authenticate('jwt', {session: false}), cityController.addCity)
 
 router.route('/cities/:id')
 .get(cityController.oneCity)
@@ -23,10 +25,18 @@ router.route('/cities/:id')
 router.route('/itineraries/:id')
 .get(itineraryController.findItenerary)
 
-// RUTA PARA OBTENER UN USUARIO
+// RUTA PARA CARGAR/OBRENER USUARIO
  router.route('/user/register')
 .get(userController.obtenerUser)
 .post(validatorController.validarCuenta,userController.cargarUser)
+
+//RUTA
+router.route('/user/signin')
+.post(userController.signIn)
+
+
+router.route('/user/lstorage')
+.post(passport.authenticate('jwt', {session: false}),userController.logFromLS)
 
 
 

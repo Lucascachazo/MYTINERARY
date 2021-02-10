@@ -42,7 +42,7 @@ const [visible, setVisible] =  useState(false)
         <div>
         {!visible ? <button className="styleBtn" onClick={()=> setVisible(!visible)}>
                      WIEW MORE</button>
-                  : <button className="styleBtn" onClick={()=> setVisible(!visible)}>WIEW      LESS</button> }  
+                  : <button className="styleBtn" onClick={()=> setVisible(!visible)}>WIEW LESS</button> }  
         </div>
     </div> 
 </>

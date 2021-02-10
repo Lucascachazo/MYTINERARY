@@ -26,6 +26,7 @@ const Colapse= (props) => {
                     <div className = "comments">
                       <h6>NAME : {comment.userName}</h6>
                         <h6>COMMENT : " {comment.coment} "</h6>
+                        
                     </div>
                     <input className = "inputComment" placeholder="Insert Coment"></input>   
                 </>   

@@ -11,3 +11,6 @@ mongoose.connect('mongodb+srv://lucaschachazo:123321@cluster0.dxdvd.mongodb.net/
 
 .then(respuesta=>console.log("Database conected"))
 .catch(error=> console.log(error))
+
+
+ 

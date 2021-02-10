@@ -5,9 +5,11 @@ import Cities from "./components/Cities"
 import  Conteiner  from "./components/Container"
 import City from "./components/City"
 import Login from './components/Login.js'
-// import Footer from "./components/Footer"
+import Register from './components/Register'
+import AddCity from './components/AddCity'
 
 function App() {
+  
   return (  
 <>
   <BrowserRouter>
@@ -16,6 +18,8 @@ function App() {
         <Route exact path = "/cities" component={Cities}/>
         <Route path = "/cities/:id" component={City}/>
         <Route path = "/login" component = {Login}/>
+        <Route path = "/register" component = {Register}/>
+        <Route path = "/addCity" component={AddCity}/>
 
         <Redirect to = "/"/>
     </Switch>

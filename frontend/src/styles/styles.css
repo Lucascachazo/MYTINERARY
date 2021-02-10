@@ -446,7 +446,9 @@ body{
 .duration{
   font-size: 2.9vh;
 }
-  
+.select{
+  height: 40vh;
+}
 
 .boxpicUser h5 {
     margin-left: 4vw;
@@ -557,9 +559,37 @@ box-shadow: 3px 2px  rgba(214, 129, 103, 0.282)
 .divColapse{
   display: flex;
 }
+.selectRegister{
+  width: 50%;
+  background-color: rgba(189, 199, 101, 0.46);
+  margin: 0 auto;
+  margin-top: 10vh;
+  color: rgb(0, 0, 0);
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+}
+.select{
+  display: block!important;
+  height: 5vh;
+  margin-bottom: 2vh;
+  font-size: 2vh;
+}
+.register{
+  border: 1px solid black;
+  margin-top: 2vh;
+  background-color: rgba(189, 199, 101, 0.46);
+  font-family: 'Architects Daughter', cursive;
+  font-weight: 800;
+  font-size: 3vh;
+  padding: 1vh;
 
-
-
+}
+.register:hover{
+  background-color: rgba(255, 255, 255, 0.419);
+}
 
 
 

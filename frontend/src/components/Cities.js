@@ -5,7 +5,7 @@ import Spiner from  "./Spiner"
 import Footer from "./Footer"
 import citiesAction from "../redux/actions/citiesAction"
 import {connect} from 'react-redux'
-// llamo a la propiedad a traves de las props que la obtengo de abajo del dispatch
+// llamo a la propiedad a traves de las (props) que la obtengo  del dispatch
 const Cities = (props) => {
     useEffect(() => {
         props.callCities()     
@@ -51,7 +51,7 @@ const mapStateToProps = state  => {
         filterCities:state.citiesReducer.filterCities
     }
 }
-// el dispatch mapea las actions que tengo , indicando la accion (componente )y la propiedad a realizar
+// el dispatch mapea las actions  , indicando la accion (componente )y la propiedad a realizar
 const mapDispatchToProps = {
     callCities : citiesAction.allCities,
     leerInput: citiesAction.filtrarCities
