@@ -8,6 +8,7 @@ import Login from './components/Login.js'
 import Register from './components/Register'
 import AddCity from './components/AddCity'
 
+
 function App() {
   
   return (  
@@ -20,6 +21,7 @@ function App() {
         <Route path = "/login" component = {Login}/>
         <Route path = "/register" component = {Register}/>
         <Route path = "/addCity" component={AddCity}/>
+
 
         <Redirect to = "/"/>
     </Switch>

@@ -15,18 +15,20 @@ const authReducer = (state = initialState , action) => {
         localStorage.setItem('username', action.payload.response.username) 
         localStorage.setItem('token', action.payload.response.token)
 
+        // console.log(action.payload.response)
 
             return {
                 ...state ,
                 loggedUser: action.payload.response
+                
             }
         
-            // case 'LOG_OUT' :
-            // localStorage.clear()  
-            // return {
-            //     ...state ,
-            //     loggedUser:initialState.loggedUser
-            // } 
+        case 'DISCONNECT_USER' :
+            localStorage.clear()  
+            return {
+                ...state ,
+                loggedUser:initialState.loggedUser
+            } 
           
         default: 
         return state

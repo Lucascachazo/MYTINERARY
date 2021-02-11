@@ -1,7 +1,51 @@
 import React from 'react';
+import {connect} from 'react-redux'
+import itinerariesAction from '../redux/actions/itinerariesAction'
+import {useState} from 'react'
+
+
 
 const Colapse= (props) => {
-     return ( 
+  const cityId = props.itinerary.cityId
+  const itineraryId = props.itinerary._id
+
+
+  // console.log(props.itinerary._id)
+  //  console.log(id)
+
+  const [comentario , setComentario]=useState({})
+
+
+
+const leerinfo = e =>{
+
+    const campo = e.target.name
+    const valor = e.target.value
+
+    setComentario({
+        ...comentario,
+        cityId ,
+        itineraryId,
+        userImg:'www.google.com' ,
+        userName:'Lucas',
+        [campo] : valor
+    })
+}
+console.log(comentario)
+
+
+
+
+
+const sendInfo = async e =>{
+    e.preventDefault()
+
+
+    props.cargaComentarios(comentario)
+}
+  
+// console.log(sendInfo)
+return ( 
       <>
       <div className="contenedorGeneral">
             {props.itinerary.activities.map(activity => {  
@@ -16,22 +60,28 @@ const Colapse= (props) => {
               </>
             )
           })} 
+               <h5 style={{textAlign:'center', fontFamily:'Yusei Magic, sans-serif'}}>COMMENTS</h5>
 
-          <div style={{margin:"2vh"}}>
+
+            <div className="comentFondo" style={{margin:"2vh"}}>
               {props.itinerary.coments.map(comment =>{
                 return (
                 <>
-                    <h5 style={{textAlign:'center', fontFamily:'Yusei Magic, sans-serif'}}>COMMENTS</h5>
-
+                    
                     <div className = "comments">
-                      <h6>NAME : {comment.userName}</h6>
-                        <h6>COMMENT : " {comment.coment} "</h6>
-                        
+                      <h6 className="inputCom">NAME : {comment.userName}</h6>
+                        <h6 className="inputCom" >COMMENT : " {comment.coment} "</h6>
                     </div>
-                    <input className = "inputComment" placeholder="Insert Coment"></input>   
+                    
+                    
                 </>   
                 )
             })} 
+            <div className="boxInputt">
+               <input name="coments" onChange={leerinfo} className = "inputComment" placeholder="Insert Coment"></input>  
+               <button onClick={sendInfo} className="btn">Send</button> 
+            </div>
+
           </div>
           
       </div>
@@ -39,7 +89,18 @@ const Colapse= (props) => {
                              
  )
 }
+const mapStateToprops = state =>{
+  return{
+      comentario:state.itinerariesReducer.itineraries
+  }
+}
+
+const mapDispatchToProps = {
+  cargaComentarios:itinerariesAction.cargaComentarios
+}
+
+
+export default connect(mapStateToprops,mapDispatchToProps) (Colapse)
  
-export default Colapse
 
 

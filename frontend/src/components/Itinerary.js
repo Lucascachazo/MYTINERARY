@@ -4,13 +4,18 @@ import Colapse from './Colapse';
 import {useState} from 'react'
 import {FaMoneyBill} from "react-icons/fa"
 import {FcAlarmClock} from "react-icons/fc"
+// import {connect} from 'react-redux'
+// import itinerariesAction from '../redux/actions/itinerariesAction'
 
 
 function Itinerary ({itinerary}) {
+    // console.log(itinerary)
     
-
 const {coments,activities,hashtag,hours,likes,price,title,userName,userPic} = itinerary
 const [visible, setVisible] =  useState(false)
+
+
+
 
    return (
 <>
@@ -48,6 +53,9 @@ const [visible, setVisible] =  useState(false)
 </>
  )
 }
+
+
+
 
 export default  Itinerary
 

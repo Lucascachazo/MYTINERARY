@@ -27,11 +27,12 @@ html *{
     background-color: rgba(255, 255, 255, 0.446);
 }
  .menu{
-     padding: 1vh;
+  
      display: flex;
-     font-size: 20px;
-     
- 
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     font-size: 3vh;
 } 
 
 .menu a{
@@ -43,12 +44,12 @@ html *{
 
  
 .boxNav{
-    
     background-color: #03010595;    
-    width:98.2vw;
+    width:100vw!important;
     height: 10vh;
     display: flex;
     justify-content: flex-end;
+    
 
 
 }
@@ -129,7 +130,8 @@ nav:hover{
     background-position: center;
     background-size:cover ;
     background-repeat: no-repeat;
-    padding: 2vh;
+    padding: 1vh;
+    width: 100vw;
 }
 
 .h1CallToAction :hover{
@@ -292,7 +294,7 @@ nav:hover{
 }
     
 .fotopik{
-    width:98.3vw;
+    width:99.3vw;
     height: 90vh;
     }
 body{
@@ -538,30 +540,36 @@ box-shadow: 3px 2px  rgba(214, 129, 103, 0.282)
 .comments{
   margin:1vh ;
   padding:2vh ;
-  border:1px solid black
 }
 .comments h6{
   padding: 1vh;
   display:flex;
-  color-interpolation-filters: ;
-  background-color: rgba(33, 33, 14, 0.494)!important;
+  background-color: rgba(228, 228, 218, 0.494)!important;
 }
 .contenedorHijo{
   display: flex;
 }
 .inputComment {
-  border: 1px solid rgba(250, 250, 250, 0.385)!important;
+  background-color: rgb(243, 220, 220)!important;
+  border: 1px solid rgba(250, 250, 250, 0.85)!important;
   text-align: center;
   width: 60%!important;
   background-color: rgba(0, 0, 0, 0.494)!important;
   margin-left: 13vw!important;
+  margin: 2vh 1vh!important;
+  height: 4vh!important;
+  color: white;
+}
+.btn{
+  background-color: rgb(51, 204, 95)!important;
 }
 .divColapse{
   display: flex;
 }
 .selectRegister{
+  
   width: 50%;
-  background-color: rgba(189, 199, 101, 0.46);
+  background-color: rgba(70, 139, 141, 0.419);
   margin: 0 auto;
   margin-top: 10vh;
   color: rgb(0, 0, 0);
@@ -569,26 +577,53 @@ box-shadow: 3px 2px  rgba(214, 129, 103, 0.282)
   display: flex;
   flex-direction: column;
   text-align: center;
-  
+  border-radius: 20px;
+  font-family: 'Architects Daughter', cursive; 
+  border: 2px solid rgb(255, 255, 255);
+}
+.selectRegister input{
+  font-family: 'Architects Daughter', cursive;
+
+}
+.userLogin{
+  font-family: 'Architects Daughter', cursive; 
+  margin-right: 10vw;
+
+
+}
+.butonSend{
+  margin-top: 8vh;
+  width:20vw;
+  margin-left: 12vw;
+  padding: 0.5vh;
+  font-family: 'Architects Daughter', cursive;
+  font-weight: 700;
+  background-color: rgba(229, 255, 0, 0.446);
+}
+.butonSend:hover{
+  background-color: rgba(81, 150, 12, 0.672);
 }
 .select{
   display: block!important;
   height: 5vh;
   margin-bottom: 2vh;
   font-size: 2vh;
+  font-family: 'Architects Daughter', cursive;
+
 }
 .register{
   border: 1px solid black;
-  margin-top: 2vh;
-  background-color: rgba(189, 199, 101, 0.46);
+  margin: 2vh auto;
+  background-color: rgba(255, 255, 255, 0.46);
   font-family: 'Architects Daughter', cursive;
   font-weight: 800;
-  font-size: 3vh;
+  font-size: 2vh;
   padding: 1vh;
+  color: black;
 
 }
 .register:hover{
-  background-color: rgba(255, 255, 255, 0.419);
+  background-color: rgba(9, 177, 29, 0.419);
 }
 
 
@@ -1037,7 +1072,7 @@ box-shadow: 3px 2px  rgba(214, 129, 103, 0.282)
   /* LOGIN---------------------------------------------------------------- */
   .logContainer{
     width: 50vw;
-    margin:30vh auto;
+    margin:10vh auto;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -1049,7 +1084,7 @@ box-shadow: 3px 2px  rgba(214, 129, 103, 0.282)
     border-radius: 1rem;
     border: solid;
     border-color: #ffffff;
-    background-image: url(../components/assets/s\ \(1\).jpg);
+    background-image: url(../components/assets/s\ \(5\).jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1095,15 +1130,57 @@ padding: 1vh;
 .sendBtn{
     display: flex;
     width: 20%;
-    padding: 1.5vh;
+    padding: 0.5vh;
     border-radius: 1vh;
-    background-color: #2e2605e0;
-    color:white ;
+    background-color: #ffffff56;
+    color:black ;
     border-color: white;
     justify-content: center;
     margin-top: 2vh;
     font-family: 'Yusei Magic', sans-serif;
 
+}
+.sendBtn:hover{
+  background-color: rgba(76, 181, 23, 0.433);
+}
+.sendBtn1{
+  margin: 2vh auto;
+  width: 20%;
+  padding: 0.5vh;
+  border-radius: 1vh;
+  background-color: #ffffff56;
+  color:black ;
+  border-color: white;
+  justify-content: center;
+  margin-top: 2vh;
+  font-family: 'Yusei Magic', sans-serif;
+
+
+}
+.welcome{
+  color:chocolate;
+}
+.comentFondo{
+  background-color: #000000c6!important;
+  border-radius: 10px;
+
+}
+.inputCom {
+  color:rgb(12, 12, 12);
+  border-radius: 20px;
+  width:50%;
+  
+}
+.sendBtn1:hover{
+  background-color: rgba(128, 255, 0, 0.618);
+}
+.google:hover{
+  background-color: rgba(70, 153, 29, 0.926)!important;
+  color: #000000!important;
+}
+.boxInputt{
+  display: flex;
+ align-items: center;
 }
 
 

@@ -46,10 +46,20 @@ const itineraryController = {
         catch(error){
             console.log(error)    
         }   
-    } 
+    } ,
+    addComment:async (req,res)=>{
+        Itinerary.findOneAndUpdate({_id:req.body.itineraryId},{$push:{coments:{userImg:req.body.userImg , userName:req.body.userName , coment:req.body.coments}}})
+        
+        .then( data=>{
+            return res.json({success: true ,respuesta: data})
+        })
+        .catch( error =>{
+            return res.json({success: false ,error: error})
+        })
+
+    }
 }
 module.exports = itineraryController
-
 
 
 

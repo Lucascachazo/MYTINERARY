@@ -3,6 +3,8 @@ import Nav from './Nav'
 import {useState} from 'react'
 import {connect} from 'react-redux'
 import citiesAction from '../redux/actions/citiesAction'
+import Swal from 'sweetalert2'
+
 
 const AddCity = (props) => {
     console.log(props)
@@ -17,18 +19,28 @@ const AddCity = (props) => {
 
         if(!nuevaCity.cityName  || !nuevaCity.cityPic  ) {
 
-            alert ("Todos los campos son obligatorios")
-
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+              })
             return false
         }
 
          const respuesta = await props.enviarCity(nuevaCity)
 
         if(respuesta && !respuesta.success ){
+
+
             alert("hubo un error")
+
+            
         }else {
-            alert("salio bien")
-         }
+            Swal.fire(
+                'Send a new City!',
+                'Good Job!',
+                'success'
+              )         }
    }
 
 
@@ -47,10 +59,12 @@ const AddCity = (props) => {
         
         <>
         <Nav/>
+        <h4 className = "titleCity">Send a New City</h4 >
+
         <div className="selectRegister">
             <input name = "cityName" type = "text" placeholder = "Enter City" onChange={leerInput} ></input>
             <input name = "cityPic" type = "text"  placeholder = "City Pic" onChange={leerInput}></input>
-            <button onClick={validarUsuario}>SEND</button>
+            <button className="butonSend" onClick={validarUsuario}>SEND</button>
 
         </div>
         </>

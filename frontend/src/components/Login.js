@@ -5,14 +5,14 @@ import GoogleLogin from 'react-google-login'
 import {useState} from 'react'
 import {connect} from 'react-redux'
 import authAction from '../redux/actions/authAction'
-
-
+import Swal from 'sweetalert2'
 
 
 export const Login = (props) => {
-    console.log(props)
-
+    //  console.log(props)
 const [usuarioLog , setUsuarioLog]  = useState({})
+const [errores, setErrores] = useState([])
+
 
     const leerInput = e => {
         const campo = e.target.name
@@ -35,29 +35,55 @@ const [usuarioLog , setUsuarioLog]  = useState({})
 
         const respuesta = await props.loginUser(usuarioLog)
 
-        console.log(respuesta)
+        // console.log(respuesta)
         if(respuesta && !respuesta.success ){
-            alert("hubo un error")
-        }else {
-            alert("salio bien")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: "All fields are required",
+                
+              })        
+            }else {
+            
+            // alert("Welcome to MyTinerary")
+             Swal.fire(
+                'Welcome To MyTinerary!',
+                'Good Job!',
+                'success'
+              )
         }
    }
    
  
     //respuesta de google
-    const responseGoogle = (response) => {
-        console.log(response);
-      }
-      
+    const responseGoogle = async response => {
+        if (response.error) {
+            alert("Algo pasó...")
+        } else {
+            const respuesta = await props.loginUser({
+                username: response.profileObj.givenName,
+                password: response.profileObj.googleId
+            })
+        if (respuesta && !respuesta.success) {
+            setErrores([respuesta.mensaje])
+        } else {
+            Swal.fire(
+                'Welcome To MyTinerary!',
+                'Good Job!',
+                'success'
+              )        }
+        }
+    }      
     return (
     <>
+
         <Nav/>
         <div className="logContainer">
 
-            <div className = " titleContainer"><h1 className = "title">Log In</h1></div>
+            <div className = " titleContainer"><h1 className = "title">SIGN IN</h1></div>
             <input className ="account"  name = "username"  type = "text" placeholder = "Enter your user" onChange ={leerInput}></input>
             <input className = "password" type="password" name = "password" placeholder = "Enter your password" onChange ={leerInput}></input>
-            <button  className="sendBtn" onClick={validarUsuario}>OK</button>
+            <button  className="sendBtn" onClick={validarUsuario}>Log In</button>
             <Link to ="/register" className="register" >Create account</Link>
 
                 <GoogleLogin
@@ -76,7 +102,7 @@ const [usuarioLog , setUsuarioLog]  = useState({})
 const mapStateToProps = (state)=>{
 
     return{
-      loggedUser: state.authReducer.loginUser
+      loggedUser: state.authReducer.loggedUser
         
     }
 }
@@ -87,7 +113,6 @@ const mapDispatchToProps = {
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)
 
-// export default Login
 
 
 

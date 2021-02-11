@@ -27,14 +27,16 @@ import axios from 'axios'
     cargarCity:(nuevaCity)=> {
         return async (dispatch, getState) => {
             const token = getState().authReducer.loggedUser ? getState().authReducer.loggedUser.token : ''
-
+            // console.log(token)
             try{
                 const respuesta = await axios.post('http://localhost:4000/cities', nuevaCity,{
                     headers: {
-                        Authorization: 'Bearer'+token
+                        Authorization: `Bearer ${token}`                    
                     }
 
-              })
+              }
+              )
+            //   console.log(respuesta)
             if(!respuesta.data.succsess){
                 return respuesta.data
             }
@@ -47,29 +49,6 @@ import axios from 'axios'
     
             }
         }
-    },
-    logFromLS:(token)=> {
-        return async (dispatch, getState) =>{
-            try{
-                const respuesta = await axios.post('http://localhost:4000/user/lstorage', token ,{
-                    headers: {
-                        Authorization: `Bearer ${token}`
-                    }
-                })
-                if(respuesta.data.succsess){
-                    console.log(respuesta)
-                }
-                dispatch({type: 'LOGIN_USER', payload:{response:{...respuesta.data.response}}})
-            }catch(error){
-                if(error.response.status=== 401){
-                    alert("esta intentando ingresar sin permisos")
-                }
-            }localStorage.clear()
-                return '/'
-
-
-        }
-
     }
 
 

@@ -19,7 +19,11 @@ router.route('/cities/:id')
 // RUTA PARA ITINERARIOS-------------------------
  router.route('/itineraries')
 .get(itineraryController.alItineraries)
+.post(itineraryController.addComment)
+
+router.route('/itineraries/addItineraries')
 .post(itineraryController.agregarItineraries)
+
 
 // RUTA PARA UN SOLO ITINERARIO POR ID------------
 router.route('/itineraries/:id')
@@ -33,6 +37,8 @@ router.route('/itineraries/:id')
 //RUTA
 router.route('/user/signin')
 .post(userController.signIn)
+
+
 
 
 router.route('/user/lstorage')
