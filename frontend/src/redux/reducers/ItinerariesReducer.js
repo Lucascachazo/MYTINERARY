@@ -12,8 +12,12 @@ const itinerariesReducer= (state = initialState , action) => {
             }
             
         default : return state
+
         
     }
 }
 
 export default itinerariesReducer
+
+
+// holaholaholaholaholahola
